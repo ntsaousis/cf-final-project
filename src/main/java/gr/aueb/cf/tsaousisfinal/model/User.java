@@ -8,7 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
@@ -54,35 +56,47 @@ public class User extends AbstractEntity implements UserDetails {
     @Column
     private RoleType role;
 
+    @ColumnDefault("true")
+    @Column(name = "is_active")
+    private Boolean isActive;
+
     @OneToOne(mappedBy = "user")
     private Student student;
 
     @OneToOne(mappedBy = "user")
     private Warden Warden;
 
+    public boolean isStudent() {
+        return getStudent() != null;
+    }
+
+    public boolean isWarden() {
+        return getWarden() != null;
+    }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
+        return this.getIsActive() == null || this.getIsActive();
     }
 }
