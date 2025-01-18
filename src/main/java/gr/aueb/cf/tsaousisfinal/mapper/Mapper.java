@@ -1,11 +1,10 @@
 package gr.aueb.cf.tsaousisfinal.mapper;
 
 
-import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
-import gr.aueb.cf.tsaousisfinal.dto.UserInsertDTO;
-import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
+import gr.aueb.cf.tsaousisfinal.dto.*;
 import gr.aueb.cf.tsaousisfinal.model.User;
 import gr.aueb.cf.tsaousisfinal.model.Warden;
+import gr.aueb.cf.tsaousisfinal.model.static_data.Room;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -54,6 +53,49 @@ public class Mapper {
         warden.setUser(user);
         return warden;
     }
+
+    public StudentReadOnlyDTO mapToStudentReadOnlyDTO(Student student) {
+        StudentReadOnlyDTO studentReadOnlyDTO = new StudentReadOnlyDTO();
+
+        studentReadOnlyDTO.setId(student.getId());
+        studentReadOnlyDTO.setIsActive(student.getIsActive());
+        studentReadOnlyDTO.setUuid(student.getUuid());
+
+        UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
+        userDTO.setFirstName(student.getUser().getFirstName());
+        userDTO.setLastName(student.getUser().getLastName());
+        userDTO.setUsername(student.getUser().getUsername());
+
+        studentReadOnlyDTO.setUser(userDTO);
+        return studentReadOnlyDTO;
+
+    }
+
+    public WardenReadOnlyDTO mapToWardenReadOnlyDTO(Warden warden) {
+        WardenReadOnlyDTO wardenReadOnlyDTO = new WardenReadOnlyDTO();
+        wardenReadOnlyDTO.setId(warden.getId());
+        wardenReadOnlyDTO.setIsActive(warden.getIsActive());
+        wardenReadOnlyDTO.setUuid(warden.getUuid());
+
+        UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
+        userDTO.setFirstName(warden.getUser().getFirstName());
+        userDTO.setLastName(warden.getUser().getLastName());
+        userDTO.setUsername(warden.getUser().getUsername());
+        wardenReadOnlyDTO.setUser(userDTO);
+        return wardenReadOnlyDTO;
+    }
+
+    public RoomReadOnlyDTO mapToReadOnlyRoomDTO(Room room) {
+        RoomReadOnlyDTO roomReadOnlyDTO = new RoomReadOnlyDTO();
+
+        roomReadOnlyDTO.setId(room.getId());
+        roomReadOnlyDTO.setRoomName(room.getRoomName());
+        roomReadOnlyDTO.setRoomCapacity(room.getRoomCapacity());
+        roomReadOnlyDTO.setIsAvailable(room.getIsAvailable());
+        return roomReadOnlyDTO;
+    }
+
+
 
 
 

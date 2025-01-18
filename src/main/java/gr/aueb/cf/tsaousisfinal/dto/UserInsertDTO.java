@@ -32,8 +32,7 @@ public class UserInsertDTO {
     @Size(max = 50, message = "Username must not exceed 50 characters.")
     private String username;
 
-    @NotBlank(message = "Vat is required")
-    @Size(min = 11, max = 11)
+    @Pattern(regexp = "^\\d{9}$", message = "Vat must have 9 digits")
     private String vat;
 
     @Pattern(regexp = "^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\\d)(?=.*?[@#$!%&*]).{8,}$",
