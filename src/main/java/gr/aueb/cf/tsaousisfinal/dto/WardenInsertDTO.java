@@ -13,6 +13,9 @@ import lombok.Setter;
 @Setter
 public class WardenInsertDTO {
 
+    @NotNull(message = "Is active must not be null")
+    private Boolean isActive;
+
     @NotNull(message = "User details are required")
-    private UserInsertDTO userInsertDTO;
+    private UserInsertDTO user;
 }

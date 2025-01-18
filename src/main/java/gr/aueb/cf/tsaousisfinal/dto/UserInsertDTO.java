@@ -32,12 +32,19 @@ public class UserInsertDTO {
     @Size(max = 50, message = "Username must not exceed 50 characters.")
     private String username;
 
+    @NotBlank(message = "Vat is required")
+    @Size(min = 11, max = 11)
+    private String vat;
+
     @Pattern(regexp = "^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\\d)(?=.*?[@#$!%&*]).{8,}$",
             message = "Invalid Password")
     private String password;
 
     @NotNull(message = "Gender type is required")
     private GenderType genderType;
+
+    @NotNull(message = "Is active must not be null")
+    private Boolean isActive;
 
     @NotNull(message = "Role type is required")
     private RoleType role;
