@@ -1,7 +1,6 @@
 package gr.aueb.cf.tsaousisfinal.model.static_data;
 
 
-import gr.aueb.cf.tsaousisfinal.model.Complaint;
 import jakarta.persistence.*;
 import lombok.*;
 import gr.aueb.cf.tsaousisfinal.model.Student;
@@ -28,19 +27,19 @@ public class Room {
     private int roomCapacity;
 
     @Column(name = "available", nullable = false)
-    private Boolean isAvailable;
+    private Boolean available;
 
 
     @OneToMany(mappedBy = "room")
     private Set<Student> students = new HashSet<>();
 
-    @OneToMany(mappedBy = "complaint")
-    private Set<Complaint> complaints = new HashSet<>();
+//    @OneToMany(mappedBy = "complaint")
+//    private Set<Complaint> complaints = new HashSet<>();
 
     @PostLoad
     @PostUpdate
     private void updateAvailability() {
-        this.isAvailable = students.size() < roomCapacity;
+        this.available = students.size() < roomCapacity;
     }
 
 

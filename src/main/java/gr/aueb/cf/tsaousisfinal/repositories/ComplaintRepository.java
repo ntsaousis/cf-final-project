@@ -7,16 +7,16 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
 
-public interface ComplaintRepository extends JpaRepository<Complaint, Long>, JpaSpecificationExecutor<Complaint> {
-
-    // Fetch all complaints by a specific student
-    List<Complaint> findByStudentId(Long studentId);
-
-    // Fetch all complaints by a specific status
-    List<Complaint> findByStatus(RequestStatus status);
-
-    // Fetch all complaints associated with a specific warden
-    List<Complaint> findByWardenId(Long wardenId);
-
-    List<Complaint> findByRoomId(Long roomId);
-}
+//public interface ComplaintRepository extends JpaRepository<Complaint, Long>, JpaSpecificationExecutor<Complaint> {
+//
+//    // Fetch all complaints by a specific student
+//    List<Complaint> findByStudentId(Long studentId);
+//
+//    // Fetch all complaints by a specific status
+//    List<Complaint> findByStatus(RequestStatus status);
+//
+//    // Fetch all complaints associated with a specific warden
+//    List<Complaint> findByWardenId(Long wardenId);
+//
+//    List<Complaint> findByRoomId(Long roomId);
+//}

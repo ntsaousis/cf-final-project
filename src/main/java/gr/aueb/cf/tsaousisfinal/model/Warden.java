@@ -33,9 +33,9 @@ public class Warden extends AbstractEntity{
 
     private Boolean isActive;
 
-    @OneToMany(mappedBy = "warden", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Column(name = "complaints")
-    private Set<Complaint> complaints = new HashSet<>();
+//    @OneToMany(mappedBy = "warden", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Column(name = "complaints")
+//    private Set<Complaint> complaints = new HashSet<>();
 
     @PrePersist
     public void initializeUUID() {

@@ -37,8 +37,8 @@ public class Student extends AbstractEntity {
     @JoinColumn(name = "room_id")
     private Room room;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Complaint> complaints = new HashSet<>();
+//    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<Complaint> complaints = new HashSet<>();
 
     @PrePersist
     public void initializeUUID() {
