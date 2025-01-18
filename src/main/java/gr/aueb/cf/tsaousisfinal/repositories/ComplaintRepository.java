@@ -17,4 +17,6 @@ public interface ComplaintRepository extends JpaRepository<Complaint, Long>, Jpa
 
     // Fetch all complaints associated with a specific warden
     List<Complaint> findByWardenId(Long wardenId);
+
+    List<Complaint> findByRoomId(Long roomId);
 }

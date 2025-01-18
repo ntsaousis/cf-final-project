@@ -1,6 +1,7 @@
 package gr.aueb.cf.tsaousisfinal.model.static_data;
 
 
+import gr.aueb.cf.tsaousisfinal.model.Complaint;
 import jakarta.persistence.*;
 import lombok.*;
 import gr.aueb.cf.tsaousisfinal.model.Student;
@@ -29,9 +30,12 @@ public class Room {
     @Column(name = "available", nullable = false)
     private Boolean isAvailable;
 
-    @Getter(AccessLevel.PRIVATE)
+
     @OneToMany(mappedBy = "room")
     private Set<Student> students = new HashSet<>();
+
+    @OneToMany(mappedBy = "complaint")
+    private Set<Complaint> complaints = new HashSet<>();
 
     @PostLoad
     @PostUpdate
