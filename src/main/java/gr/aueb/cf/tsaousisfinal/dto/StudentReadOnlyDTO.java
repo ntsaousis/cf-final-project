@@ -17,4 +17,6 @@ public class StudentReadOnlyDTO {
     private Boolean isActive;
 
     private UserReadOnlyDTO user;
+
+    private String roomId;
 }

@@ -91,7 +91,7 @@ public class Mapper {
         roomReadOnlyDTO.setId(room.getId());
         roomReadOnlyDTO.setRoomName(room.getRoomName());
         roomReadOnlyDTO.setRoomCapacity(room.getRoomCapacity());
-        roomReadOnlyDTO.setIsAvailable(room.getAvailable());
+        roomReadOnlyDTO.setAvailable(room.getAvailable());
         return roomReadOnlyDTO;
     }
 

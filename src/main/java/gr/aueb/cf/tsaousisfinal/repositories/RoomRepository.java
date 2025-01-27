@@ -8,17 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface RoomRepository extends JpaRepository<Room, Long>, JpaSpecificationExecutor<Room> {
-    List<Room> findByAvailable(boolean available);
 
-    Optional<Room> findById(long id);
 
-    // Finds all available rooms
 
-    List<Room> findAllByAvailableTrue();
 
-    // Finds all full rooms
 
-    List<Room> findAllByAvailableFalse();
 
 
 

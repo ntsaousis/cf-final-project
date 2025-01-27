@@ -16,5 +16,5 @@ public class RoomReadOnlyDTO {
     private String roomName;
     private int roomCapacity;
 
-    private Boolean isAvailable;
+    private Boolean available;
 }

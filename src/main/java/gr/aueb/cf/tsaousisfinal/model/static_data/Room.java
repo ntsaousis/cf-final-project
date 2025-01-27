@@ -24,10 +24,15 @@ public class Room {
     private String roomName;
 
     @Column(name = "room_capacity")
-    private int roomCapacity;
+    private int RoomCapacity;
 
-    @Column(name = "available", nullable = false)
-    private Boolean available;
+    @Transient
+    private boolean available;
+
+    public boolean getAvailable() {
+        return this.students.size() < this.RoomCapacity; // Example logic
+    }
+
 
 
     @OneToMany(mappedBy = "room")
@@ -39,7 +44,7 @@ public class Room {
     @PostLoad
     @PostUpdate
     private void updateAvailability() {
-        this.available = students.size() < roomCapacity;
+        this.available = students.size() < RoomCapacity;
     }
 
 
