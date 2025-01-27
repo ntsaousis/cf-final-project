@@ -45,7 +45,7 @@ public class RoomService {
      *
      * @return List of RoomReadOnlyDTO
      */
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true, rollbackFor = Exception.class)
     public List<RoomReadOnlyDTO> getAllRooms() {
         LOGGER.info("Fetching all rooms");
 

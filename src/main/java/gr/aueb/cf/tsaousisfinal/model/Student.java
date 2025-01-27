@@ -31,7 +31,7 @@ public class Student extends AbstractEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Boolean isActive;
+
 
     @ManyToOne
     @JoinColumn(name = "room_id")

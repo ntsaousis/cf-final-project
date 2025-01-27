@@ -31,7 +31,7 @@ public class Warden extends AbstractEntity{
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Boolean isActive;
+    
 
 //    @OneToMany(mappedBy = "warden", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @Column(name = "complaints")

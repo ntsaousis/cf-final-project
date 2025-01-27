@@ -64,7 +64,7 @@ public class User extends AbstractEntity implements UserDetails {
     private Student student;
 
     @OneToOne(mappedBy = "user")
-    private Warden Warden;
+    private Warden warden;
 
     public boolean isStudent() {
         return getStudent() != null;
