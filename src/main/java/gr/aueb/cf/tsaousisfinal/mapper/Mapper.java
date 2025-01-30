@@ -18,10 +18,12 @@ public class Mapper {
 
     public Student mapToStudentEntity(StudentInsertDTO studentInsertDTO) {
         Student student = new Student();
-        student.setIsActive(studentInsertDTO.getIsActive());
+//        student.setIsActive(studentInsertDTO.getIsActive());
 
         User user = new User();
+
         UserInsertDTO userInsertDTO = studentInsertDTO.getUser();
+        user.setIsActive(studentInsertDTO.getIsActive());
         user.setFirstName(userInsertDTO.getFirstName());
         user.setLastName(userInsertDTO.getLastName());
         user.setUsername(userInsertDTO.getUsername());
@@ -37,10 +39,11 @@ public class Mapper {
 
     public Warden mapToWardenEntity(WardenInsertDTO wardenInsertDTO) {
         Warden warden = new Warden();
-        warden.setIsActive(wardenInsertDTO.getIsActive());
+//        warden.setIsActive(wardenInsertDTO.getIsActive());
 
         User user = new User();
         UserInsertDTO userInsertDTO = wardenInsertDTO.getUser();
+        user.setIsActive(wardenInsertDTO.getIsActive());
         user.setFirstName(userInsertDTO.getFirstName());
         user.setLastName(userInsertDTO.getLastName());
         user.setUsername(userInsertDTO.getUsername());
@@ -58,13 +61,14 @@ public class Mapper {
         StudentReadOnlyDTO studentReadOnlyDTO = new StudentReadOnlyDTO();
 
         studentReadOnlyDTO.setId(student.getId());
-        studentReadOnlyDTO.setIsActive(student.getIsActive());
+//        studentReadOnlyDTO.setIsActive(student.getIsActive());
         studentReadOnlyDTO.setUuid(student.getUuid());
 
         UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
         userDTO.setFirstName(student.getUser().getFirstName());
         userDTO.setLastName(student.getUser().getLastName());
         userDTO.setUsername(student.getUser().getUsername());
+
 
         studentReadOnlyDTO.setUser(userDTO);
         return studentReadOnlyDTO;
@@ -74,7 +78,7 @@ public class Mapper {
     public WardenReadOnlyDTO mapToWardenReadOnlyDTO(Warden warden) {
         WardenReadOnlyDTO wardenReadOnlyDTO = new WardenReadOnlyDTO();
         wardenReadOnlyDTO.setId(warden.getId());
-        wardenReadOnlyDTO.setIsActive(warden.getIsActive());
+//        wardenReadOnlyDTO.setIsActive(warden.getIsActive());
         wardenReadOnlyDTO.setUuid(warden.getUuid());
 
         UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
