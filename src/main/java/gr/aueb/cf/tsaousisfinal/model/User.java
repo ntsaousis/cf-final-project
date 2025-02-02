@@ -41,6 +41,9 @@ public class User extends AbstractEntity implements UserDetails {
     @Column(nullable = false)
     private String lastName;
 
+    @Column(nullable = false)
+    private String email;
+
     @Column(nullable = false, unique = true)
     private String vat;
 

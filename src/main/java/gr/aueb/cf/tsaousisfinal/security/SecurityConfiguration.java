@@ -48,7 +48,7 @@ public class SecurityConfiguration {
                         .accessDeniedHandler(myCustomAccessDeniedHandler()))
                 .exceptionHandling((exceptions) -> exceptions.authenticationEntryPoint(myCustomAuthenticationEntryPoint()))
                 .authorizeHttpRequests(req -> req
-                                .requestMatchers("/api/teachers/save").permitAll()
+                                .requestMatchers("/api/students/save").permitAll()
                                 .requestMatchers("/api/auth/authenticate").permitAll()
                                 .requestMatchers("/api/wardens/**").hasAnyAuthority(RoleType.WARDEN.name(), RoleType.ADMIN.name())
                                 .requestMatchers("/api/students/**").hasAuthority(RoleType.STUDENT.name())
@@ -58,6 +58,8 @@ public class SecurityConfiguration {
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+               // or  .addFilterBefore(jwtAuthFilter, SecurityContextPersistenceFilter.class);
+
 
         return http.build();
     }
