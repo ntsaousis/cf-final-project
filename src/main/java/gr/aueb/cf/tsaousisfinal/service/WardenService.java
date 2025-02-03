@@ -5,14 +5,20 @@ import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentExceptio
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
 import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
+import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
+import gr.aueb.cf.tsaousisfinal.dto.WardenReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.mapper.Mapper;
 import gr.aueb.cf.tsaousisfinal.model.Student;
+import gr.aueb.cf.tsaousisfinal.model.Warden;
 import gr.aueb.cf.tsaousisfinal.model.static_data.Room;
 import gr.aueb.cf.tsaousisfinal.repositories.RoomRepository;
 import gr.aueb.cf.tsaousisfinal.repositories.StudentRepository;
+import gr.aueb.cf.tsaousisfinal.repositories.UserRepository;
+import gr.aueb.cf.tsaousisfinal.repositories.WardenRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +33,10 @@ public class WardenService {
 
     private final RoomRepository roomRepository;
     private final StudentRepository studentRepository;
-    private final Mapper entityMapper;
+    private final UserRepository userRepository;
+    private final WardenRepository wardenRepository;
+    private final Mapper mapper;
+    private final PasswordEncoder passwordEncoder;
 
     /**
      * Assigns a student to a specific room.
@@ -60,7 +69,32 @@ public class WardenService {
         studentRepository.save(student);
 
         LOGGER.info("Student with ID {} successfully assigned to room with ID {}", studentId, roomId);
-        return entityMapper.mapToReadOnlyRoomDTO(room);
+        return mapper.mapToReadOnlyRoomDTO(room);
+    }
+
+    @Transactional
+    public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists {
+        // Check if username already exists
+        if (userRepository.findByUsername(wardenInsertDTO.getUser().getUsername()).isPresent()) {
+            throw new AppObjectAlreadyExists("USERNAME", "Username already exists: " + wardenInsertDTO.getUser().getUsername());
+        }
+
+        // Check if VAT already exists
+        if (userRepository.findByVat(wardenInsertDTO.getUser().getVat()).isPresent()) {
+            throw new AppObjectAlreadyExists("VAT", "VAT already exists: " + wardenInsertDTO.getUser().getVat());
+        }
+
+        // Map DTO to entity
+        Warden warden = mapper.mapToWardenEntity(wardenInsertDTO);
+
+        // Encode password
+        warden.getUser().setPassword(passwordEncoder.encode(wardenInsertDTO.getUser().getPassword()));
+
+        // Save warden to the database
+        Warden savedWarden = wardenRepository.save(warden);
+
+        // Map entity to ReadOnlyDTO and return
+        return mapper.mapToWardenReadOnlyDTO(savedWarden);
     }
 
     /**
@@ -87,7 +121,7 @@ public class WardenService {
         student.setRoom(null);
         studentRepository.save(student);
 
-        StudentReadOnlyDTO studentDTO = entityMapper.mapToStudentReadOnlyDTO(student);
+        StudentReadOnlyDTO studentDTO = mapper.mapToStudentReadOnlyDTO(student);
         studentDTO.setRoomId(null); // Explicitly set roomId to null
         LOGGER.info("Student with ID {} successfully removed from room", studentId);
         return studentDTO;
@@ -107,7 +141,7 @@ public class WardenService {
                 .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
 
         List<StudentReadOnlyDTO> students = room.getStudents().stream()
-                .map(entityMapper::mapToStudentReadOnlyDTO)
+                .map(mapper::mapToStudentReadOnlyDTO)
                 .peek(dto -> dto.setRoomId(roomId.toString())) // Ensure roomId is set
                 .collect(Collectors.toList());
 

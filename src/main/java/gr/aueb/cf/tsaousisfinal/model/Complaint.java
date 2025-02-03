@@ -11,7 +11,6 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder
 @Table(name = "complaints")
 public class Complaint extends AbstractEntity{
 

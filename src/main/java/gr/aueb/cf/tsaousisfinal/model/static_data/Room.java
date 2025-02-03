@@ -26,8 +26,9 @@ public class Room {
     @Column(name = "room_capacity")
     private int RoomCapacity;
 
-    @Transient
-    private boolean available;
+
+    @Column(name = "available")
+    private boolean available = true;
 
     public boolean getAvailable() {
         return this.students.size() < this.RoomCapacity; // Example logic

@@ -23,10 +23,11 @@ public class Mapper {
         User user = new User();
 
         UserInsertDTO userInsertDTO = studentInsertDTO.getUser();
-        user.setIsActive(studentInsertDTO.getIsActive());
+        user.setIsActive(true);
         user.setFirstName(userInsertDTO.getFirstName());
         user.setLastName(userInsertDTO.getLastName());
         user.setUsername(userInsertDTO.getUsername());
+        user.setEmail(userInsertDTO.getEmail());
         user.setVat(userInsertDTO.getVat());
         user.setPassword(userInsertDTO.getPassword());
         user.setGenderType(userInsertDTO.getGenderType());
@@ -43,11 +44,12 @@ public class Mapper {
 
         User user = new User();
         UserInsertDTO userInsertDTO = wardenInsertDTO.getUser();
-        user.setIsActive(wardenInsertDTO.getIsActive());
+        user.setIsActive(true);
         user.setFirstName(userInsertDTO.getFirstName());
         user.setLastName(userInsertDTO.getLastName());
         user.setUsername(userInsertDTO.getUsername());
         user.setPassword(userInsertDTO.getPassword());
+        user.setEmail(userInsertDTO.getEmail());
         user.setVat(userInsertDTO.getVat());
         user.setGenderType(userInsertDTO.getGenderType());
         user.setIsActive(userInsertDTO.getIsActive());
@@ -98,15 +100,5 @@ public class Mapper {
         roomReadOnlyDTO.setAvailable(room.getAvailable());
         return roomReadOnlyDTO;
     }
-
-
-
-
-
-
-
-
-
-
 
 }

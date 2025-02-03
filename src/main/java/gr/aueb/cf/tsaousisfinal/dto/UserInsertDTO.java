@@ -2,10 +2,7 @@ package gr.aueb.cf.tsaousisfinal.dto;
 
 import gr.aueb.cf.tsaousisfinal.core.enums.GenderType;
 import gr.aueb.cf.tsaousisfinal.core.enums.RoleType;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,6 +29,10 @@ public class UserInsertDTO {
     @Size(max = 50, message = "Username must not exceed 50 characters.")
     private String username;
 
+    @NotBlank(message = "Email is required")
+    @Email
+    private String email;
+
     @Pattern(regexp = "^\\d{9}$", message = "Vat must have 9 digits")
     private String vat;
 
@@ -43,7 +44,7 @@ public class UserInsertDTO {
     private GenderType genderType;
 
     @NotNull(message = "Is active must not be null")
-    private Boolean isActive;
+    private Boolean isActive = true;
 
     @NotNull(message = "Role type is required")
     private RoleType role;

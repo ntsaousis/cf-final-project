@@ -47,8 +47,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 
         try {
-            username = jwtService.extractUsername(jwt);
-            userRole = jwtService.extractRole(jwt);
+            username = jwtService.extractSubject(jwt);
+            userRole = jwtService.getStringClaim(jwt, "role");
 
 //            System.out.println("wwww JWT extracted.. ROLE: " + userRole);
 //            System.out.println("wwww JWT extracted.. ID: " + username);
