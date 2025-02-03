@@ -1,4 +1,90 @@
 package gr.aueb.cf.tsaousisfinal.service;
 
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
+import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
+import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
+import gr.aueb.cf.tsaousisfinal.mapper.Mapper;
+import gr.aueb.cf.tsaousisfinal.repositories.StudentRepository;
+import gr.aueb.cf.tsaousisfinal.repositories.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+
+@Service
+@RequiredArgsConstructor
 public class StudentService {
+
+    private final StudentRepository studentRepository;
+    private final UserRepository userRepository;
+    private final Mapper mapper;
+    private final PasswordEncoder passwordEncoder;
+
+    @Transactional
+    public StudentReadOnlyDTO createStudent(StudentInsertDTO studentInsertDTO) throws AppObjectAlreadyExists, IOException {
+        // Check if username already exists
+        userRepository.findByUsername(studentInsertDTO.getUser().getUsername())
+                .ifPresent(user -> {
+                    try {
+                        throw new AppObjectAlreadyExists("USERNAME", "Username already exists: " + user.getUsername());
+                    } catch (AppObjectAlreadyExists e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+        // Check if VAT already exists
+        userRepository.findByVat(studentInsertDTO.getUser().getVat())
+                .ifPresent(user -> {
+                    throw new AppObjectAlreadyExists("VAT", "VAT already exists: " + user.getVat());
+                });
+
+        // Map DTO to entity
+        Student student = mapper.mapToStudentEntity(studentInsertDTO);
+
+        // Encrypt password
+        student.getUser().setPassword(passwordEncoder.encode(studentInsertDTO.getUser().getPassword()));
+
+        // Save student
+        student = studentRepository.save(student);
+
+        // Return read-only DTO
+        return mapper.mapToStudentReadOnlyDTO(student);
+    }
+
+    @Transactional(readOnly = true)
+    public StudentReadOnlyDTO getStudentById(Long id) throws AppObjectNotFoundException, IOException {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
+
+        return mapper.mapToStudentReadOnlyDTO(student);
+    }
+
+    @Transactional(readOnly = true)
+    public List<StudentReadOnlyDTO> getAllStudents() throws IOException {
+        return studentRepository.findAll().stream()
+                .map(mapper::mapToStudentReadOnlyDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public StudentReadOnlyDTO updateStudent(Long id, StudentInsertDTO studentInsertDTO)
+            throws AppObjectNotFoundException, IOException {
+        Student existingStudent = studentRepository.findById(id)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
+
+        // Map new data onto existing student
+        mapper.updateStudentEntityFromDTO(studentInsertDTO, existingStudent);
+
+        // Encrypt password if changed
+        if (studentInsertDTO.getUser().getPassword() != null) {
+            existingStudent.getUser().setPassword(passwordEncoder.encode(studentInsertDTO.getUser().getPassword()));
+        }
+
+        // Save updated student
+        Student updatedStudent = studentRepository.save(existingStudent);
+
+        return mapper.mapToStudentReadOnlyDTO(updatedStudent);
+    }
 }
+
