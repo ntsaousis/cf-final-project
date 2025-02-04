@@ -1,6 +1,7 @@
 HELP.md
 .gradle/
 .idea/
+.logs/
 gradle/
 .gradle.bat
 gradlew

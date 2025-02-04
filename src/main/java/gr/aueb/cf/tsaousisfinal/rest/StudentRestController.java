@@ -36,22 +36,20 @@ public class StudentRestController {
             return new ResponseEntity<>(student, HttpStatus.OK);
         } catch (AppObjectNotFoundException e) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        } catch (IOException e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<StudentReadOnlyDTO> updateStudent(@PathVariable Long id, @RequestBody StudentInsertDTO studentInsertDTO) {
-        try {
-            StudentReadOnlyDTO updatedStudent = studentService.updateStudent(id, studentInsertDTO);
-            return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
-        } catch (AppObjectNotFoundException e) {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        } catch (IOException e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+//    @PutMapping("/{id}")
+//    public ResponseEntity<StudentReadOnlyDTO> updateStudent(@PathVariable Long id, @RequestBody StudentInsertDTO studentInsertDTO) {
+//        try {
+//            StudentReadOnlyDTO updatedStudent = studentService.updateStudent(id, studentInsertDTO);
+//            return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
+//        } catch (AppObjectNotFoundException e) {
+//            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+//        } catch (IOException e) {
+//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 
 
 }
