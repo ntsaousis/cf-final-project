@@ -6,7 +6,7 @@ import gr.aueb.cf.tsaousisfinal.model.static_data.Room;
 import jakarta.persistence.*;
 import lombok.*;
 
-
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
