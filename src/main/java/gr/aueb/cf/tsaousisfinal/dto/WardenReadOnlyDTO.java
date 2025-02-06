@@ -14,7 +14,7 @@ public class WardenReadOnlyDTO {
 
     private Long id;
     private String uuid;
-    private Boolean isActive;
+
 
     private UserReadOnlyDTO user;
 }

@@ -14,7 +14,7 @@ public class StudentReadOnlyDTO {
 
     private Long id;
     private String uuid;
-    private Boolean isActive;
+
 
     private UserReadOnlyDTO user;
 

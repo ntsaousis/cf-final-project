@@ -19,7 +19,7 @@ public class StudentRestController {
 
     private final StudentService studentService;
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<StudentReadOnlyDTO> createStudent(@RequestBody StudentInsertDTO studentInsertDTO) {
         try {
             StudentReadOnlyDTO createdStudent = studentService.createStudent(studentInsertDTO);

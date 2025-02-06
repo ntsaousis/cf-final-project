@@ -31,9 +31,9 @@ public class Mapper {
         user.setVat(userInsertDTO.getVat());
         user.setPassword(userInsertDTO.getPassword());
         user.setGenderType(userInsertDTO.getGenderType());
-        user.setIsActive(userInsertDTO.getIsActive());
+
         user.setRole(userInsertDTO.getRole());
-        user.setDateOfBirth(userInsertDTO.getDateOfBirth());
+
         student.setUser(user);
         return student;
     }
@@ -52,9 +52,8 @@ public class Mapper {
         user.setEmail(userInsertDTO.getEmail());
         user.setVat(userInsertDTO.getVat());
         user.setGenderType(userInsertDTO.getGenderType());
-        user.setIsActive(userInsertDTO.getIsActive());
         user.setRole(userInsertDTO.getRole());
-        user.setDateOfBirth(userInsertDTO.getDateOfBirth());
+
         warden.setUser(user);
         return warden;
     }
@@ -70,6 +69,7 @@ public class Mapper {
         userDTO.setFirstName(student.getUser().getFirstName());
         userDTO.setLastName(student.getUser().getLastName());
         userDTO.setUsername(student.getUser().getUsername());
+        userDTO.setRole(student.getUser().getRole().name());
 
 
         studentReadOnlyDTO.setUser(userDTO);
@@ -87,6 +87,7 @@ public class Mapper {
         userDTO.setFirstName(warden.getUser().getFirstName());
         userDTO.setLastName(warden.getUser().getLastName());
         userDTO.setUsername(warden.getUser().getUsername());
+        userDTO.setRole(warden.getUser().getRole().name());
         wardenReadOnlyDTO.setUser(userDTO);
         return wardenReadOnlyDTO;
     }

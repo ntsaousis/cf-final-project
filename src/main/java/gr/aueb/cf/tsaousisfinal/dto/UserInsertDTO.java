@@ -43,12 +43,10 @@ public class UserInsertDTO {
     @NotNull(message = "Gender type is required")
     private GenderType genderType;
 
-    @NotNull(message = "Is active must not be null")
-    private Boolean isActive = true;
+
 
     @NotNull(message = "Role type is required")
     private RoleType role;
 
-    @NotNull(message = "Date of birth is required")
-    private LocalDate dateOfBirth;
+
 }

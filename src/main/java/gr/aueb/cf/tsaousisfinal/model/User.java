@@ -46,9 +46,7 @@ public class User extends AbstractEntity implements UserDetails {
 
     @Column(nullable = false, unique = true)
     private String vat;
-
-    private LocalDate dateOfBirth;
-
+    
     @Enumerated(EnumType.STRING)
     @Column
     private GenderType genderType;
