@@ -53,6 +53,7 @@ public class SecurityConfiguration {
                                 .requestMatchers("/api/auth/authenticate").permitAll()
                                 .requestMatchers("/api/wardens/**").hasAnyAuthority(RoleType.WARDEN.name(), RoleType.ADMIN.name())
                                 .requestMatchers("/api/students/**").permitAll()   //hasAuthority(RoleType.STUDENT.name())
+                                .requestMatchers("/api/rooms/**").permitAll()
                                 .requestMatchers("/**").permitAll() // static resources
                         //.authenticated()
                 )

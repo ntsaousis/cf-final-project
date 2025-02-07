@@ -1,7 +1,9 @@
 package gr.aueb.cf.tsaousisfinal.service;
 
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
 import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.mapper.Mapper;
@@ -9,6 +11,10 @@ import gr.aueb.cf.tsaousisfinal.model.Student;
 import gr.aueb.cf.tsaousisfinal.repositories.StudentRepository;
 import gr.aueb.cf.tsaousisfinal.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -62,6 +68,15 @@ public class StudentService {
         // Return read-only DTO
         return mapper.mapToStudentReadOnlyDTO(student);
     }
+
+    public Page<StudentReadOnlyDTO> getPaginatedStudents(int page, int size) {
+        String defaultSort = "id";
+        Pageable pageable = PageRequest.of(page, size, Sort.by(defaultSort).ascending());
+        return studentRepository.findAll(pageable).map(mapper::mapToStudentReadOnlyDTO);
+    }
+
+
+
 
     @Transactional(readOnly = true)
     public StudentReadOnlyDTO getStudentById(Long id) throws AppObjectNotFoundException {
