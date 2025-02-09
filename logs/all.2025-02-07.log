@@ -1,0 +1,947 @@
+2025-02-07 10:32:00 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 10:32:00 INFO  - Starting DormApp using Java 17.0.14 with PID 6916 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 10:32:00 INFO  - The following 1 profile is active: "test"
+2025-02-07 10:32:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 10:32:02 INFO  - Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2025-02-07 10:32:06 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 10:32:06 INFO  - Root WebApplicationContext: initialization completed in 6275 ms
+2025-02-07 10:32:07 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 10:32:08 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 10:32:11 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 10:32:14 WARN  - SQL Error: 0, SQLState: 08S01
+2025-02-07 10:32:14 ERROR - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-02-07 10:32:14 WARN  - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at gr.aueb.cf.tsaousisfinal.DormApp.main(DormApp.java:12)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 120 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 133 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 136 common frames omitted
+2025-02-07 10:32:14 ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-02-07 10:32:14 ERROR - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-02-07 10:32:15 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-02-07 10:32:15 ERROR - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at gr.aueb.cf.tsaousisfinal.DormApp.main(DormApp.java:12)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 93 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	... 100 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 115 common frames omitted
+2025-02-07 10:33:09 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 10:33:09 INFO  - Starting DormApp using Java 17.0.14 with PID 10180 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 10:33:09 INFO  - The following 1 profile is active: "test"
+2025-02-07 10:33:11 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 10:33:11 INFO  - Finished Spring Data repository scanning in 190 ms. Found 5 JPA repository interfaces.
+2025-02-07 10:33:14 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 10:33:14 INFO  - Root WebApplicationContext: initialization completed in 5249 ms
+2025-02-07 10:33:15 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 10:33:15 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 10:33:16 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 10:33:17 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 10:33:20 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 10:33:21 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 10:33:22 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 10:33:22 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 10:33:23 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 10:33:23 INFO  - Started DormApp in 15.956 seconds (process running for 16.686)
+2025-02-07 10:35:10 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 10:35:10 INFO  - Completed initialization in 4 ms
+2025-02-07 10:35:28 INFO  - User authenticated
+2025-02-07 10:35:30 INFO  - User authenticated
+2025-02-07 10:35:31 INFO  - User authenticated
+2025-02-07 10:35:31 INFO  - User authenticated
+2025-02-07 10:35:31 INFO  - User authenticated
+2025-02-07 10:35:31 INFO  - User authenticated
+2025-02-07 10:35:31 INFO  - User authenticated
+2025-02-07 10:35:33 INFO  - User authenticated
+2025-02-07 10:35:33 INFO  - User authenticated
+2025-02-07 10:35:34 INFO  - User authenticated
+2025-02-07 10:35:34 INFO  - User authenticated
+2025-02-07 10:35:34 INFO  - User authenticated
+2025-02-07 10:35:36 INFO  - User authenticated
+2025-02-07 10:35:37 INFO  - User authenticated
+2025-02-07 10:35:37 INFO  - User authenticated
+2025-02-07 10:35:38 INFO  - User authenticated
+2025-02-07 10:35:38 INFO  - User authenticated
+2025-02-07 10:35:56 INFO  - User authenticated
+2025-02-07 10:38:54 INFO  - User authenticated
+2025-02-07 10:38:55 INFO  - User authenticated
+2025-02-07 10:38:56 INFO  - User authenticated
+2025-02-07 10:38:56 INFO  - User authenticated
+2025-02-07 10:38:56 INFO  - User authenticated
+2025-02-07 10:38:57 INFO  - User authenticated
+2025-02-07 10:38:57 INFO  - User authenticated
+2025-02-07 10:38:57 INFO  - User authenticated
+2025-02-07 10:38:57 INFO  - User authenticated
+2025-02-07 10:38:58 INFO  - User authenticated
+2025-02-07 10:38:58 INFO  - User authenticated
+2025-02-07 10:38:59 INFO  - User authenticated
+2025-02-07 10:39:00 INFO  - User authenticated
+2025-02-07 10:39:00 INFO  - User authenticated
+2025-02-07 10:41:39 INFO  - User authenticated
+2025-02-07 10:48:59 INFO  - User authenticated
+2025-02-07 10:51:43 INFO  - User authenticated
+2025-02-07 10:54:40 INFO  - User authenticated
+2025-02-07 10:55:26 INFO  - User authenticated
+2025-02-07 12:04:47 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 12:04:47 INFO  - Starting DormApp using Java 17.0.14 with PID 9024 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 12:04:47 INFO  - The following 1 profile is active: "test"
+2025-02-07 12:04:49 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 12:04:49 INFO  - Finished Spring Data repository scanning in 124 ms. Found 5 JPA repository interfaces.
+2025-02-07 12:04:50 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 12:04:50 INFO  - Root WebApplicationContext: initialization completed in 3127 ms
+2025-02-07 12:04:51 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 12:04:51 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 12:04:51 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 12:04:52 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 12:04:54 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 12:04:54 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 12:04:55 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 12:04:55 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 12:04:56 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 12:04:56 INFO  - Started DormApp in 10.692 seconds (process running for 11.468)
+2025-02-07 12:06:19 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 12:06:19 INFO  - Completed initialization in 8 ms
+2025-02-07 12:06:20 INFO  - User authenticated
+2025-02-07 12:09:53 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 12:09:53 INFO  - Starting DormApp using Java 17.0.14 with PID 3020 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 12:09:53 INFO  - The following 1 profile is active: "test"
+2025-02-07 12:09:55 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 12:09:55 INFO  - Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2025-02-07 12:09:56 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 12:09:57 INFO  - Root WebApplicationContext: initialization completed in 3274 ms
+2025-02-07 12:09:57 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 12:09:57 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 12:09:58 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 12:09:58 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 12:10:01 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 12:10:01 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 12:10:01 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 12:10:02 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 12:10:03 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 12:10:03 INFO  - Started DormApp in 10.679 seconds (process running for 11.406)
+2025-02-07 12:10:16 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 12:10:16 INFO  - Completed initialization in 3 ms
+2025-02-07 12:10:17 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 12:16:29 INFO  - User authenticated
+2025-02-07 12:28:12 INFO  - User authenticated
+2025-02-07 12:54:34 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 12:54:34 INFO  - Starting DormApp using Java 17.0.14 with PID 4720 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 12:54:34 INFO  - The following 1 profile is active: "test"
+2025-02-07 12:54:36 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 12:55:52 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 12:55:52 INFO  - Starting DormApp using Java 17.0.14 with PID 15956 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 12:55:52 INFO  - The following 1 profile is active: "test"
+2025-02-07 12:55:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 12:55:54 INFO  - Finished Spring Data repository scanning in 150 ms. Found 5 JPA repository interfaces.
+2025-02-07 12:55:56 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 12:55:56 INFO  - Root WebApplicationContext: initialization completed in 3364 ms
+2025-02-07 12:55:56 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 12:55:56 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 12:55:57 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 12:55:58 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 12:56:00 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 12:56:00 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 12:56:01 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 12:56:01 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 12:56:02 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 12:56:02 INFO  - Started DormApp in 11.011 seconds (process running for 11.811)
+2025-02-07 12:56:11 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 12:56:11 INFO  - Completed initialization in 3 ms
+2025-02-07 12:56:11 INFO  - Fetching all rooms
+2025-02-07 12:56:11 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 12:56:38 INFO  - Fetching all rooms
+2025-02-07 12:57:07 INFO  - User authenticated
+2025-02-07 12:57:07 INFO  - Fetching all rooms
+2025-02-07 13:01:05 INFO  - Fetching all rooms
+2025-02-07 13:03:22 INFO  - Fetching all rooms
+2025-02-07 13:04:01 INFO  - User authenticated
+2025-02-07 13:04:01 INFO  - Fetching all rooms
+2025-02-07 13:08:40 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 13:08:40 INFO  - Starting DormApp using Java 17.0.14 with PID 15864 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 13:08:40 INFO  - The following 1 profile is active: "test"
+2025-02-07 13:08:42 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 13:08:42 INFO  - Finished Spring Data repository scanning in 129 ms. Found 5 JPA repository interfaces.
+2025-02-07 13:08:43 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 13:08:43 INFO  - Root WebApplicationContext: initialization completed in 3446 ms
+2025-02-07 13:08:44 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 13:08:44 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 13:08:45 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 13:08:45 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 13:08:48 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 13:08:48 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 13:08:48 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 13:08:49 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 13:08:50 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 13:08:50 INFO  - Started DormApp in 11.101 seconds (process running for 11.819)
+2025-02-07 13:08:57 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 13:08:57 INFO  - Completed initialization in 2 ms
+2025-02-07 13:08:57 INFO  - Fetching all rooms
+2025-02-07 13:08:58 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:09:08 INFO  - Fetching all rooms
+2025-02-07 13:09:08 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:09:08 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 13:16:08 INFO  - User authenticated
+2025-02-07 13:16:08 INFO  - Fetching all rooms
+2025-02-07 13:16:08 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:45:29 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 13:45:30 INFO  - Starting DormApp using Java 17.0.14 with PID 14556 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 13:45:30 INFO  - The following 1 profile is active: "test"
+2025-02-07 13:45:31 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 13:45:31 INFO  - Finished Spring Data repository scanning in 114 ms. Found 5 JPA repository interfaces.
+2025-02-07 13:45:33 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 13:45:33 INFO  - Root WebApplicationContext: initialization completed in 3307 ms
+2025-02-07 13:45:34 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 13:45:34 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 13:45:34 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 13:45:35 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 13:45:38 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 13:45:38 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 13:45:38 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 13:45:39 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 13:45:40 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 13:45:40 INFO  - Started DormApp in 11.402 seconds (process running for 12.097)
+2025-02-07 13:45:43 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 13:45:43 INFO  - Completed initialization in 2 ms
+2025-02-07 13:48:42 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 13:48:43 INFO  - Starting DormApp using Java 17.0.14 with PID 2412 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 13:48:43 INFO  - The following 1 profile is active: "test"
+2025-02-07 13:48:45 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 13:48:45 INFO  - Finished Spring Data repository scanning in 125 ms. Found 5 JPA repository interfaces.
+2025-02-07 13:48:46 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 13:48:46 INFO  - Root WebApplicationContext: initialization completed in 3569 ms
+2025-02-07 13:48:47 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 13:48:47 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 13:48:47 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 13:48:48 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 13:48:51 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 13:48:51 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 13:48:51 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 13:48:52 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 13:48:53 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 13:48:53 INFO  - Started DormApp in 11.628 seconds (process running for 12.454)
+2025-02-07 13:48:58 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 13:48:58 INFO  - Completed initialization in 3 ms
+2025-02-07 13:48:58 INFO  - Warden assigning student with ID 1 to room with ID 1
+2025-02-07 13:48:58 INFO  - Student with ID 1 successfully assigned to room with ID 1
+2025-02-07 13:50:32 INFO  - User authenticated
+2025-02-07 13:50:32 INFO  - Fetching all rooms
+2025-02-07 13:50:32 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:50:32 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 13:50:37 INFO  - Warden assigning student with ID 1 to room with ID 2
+2025-02-07 13:50:50 INFO  - Warden assigning student with ID 2 to room with ID 3
+2025-02-07 13:50:50 INFO  - Student with ID 2 successfully assigned to room with ID 3
+2025-02-07 13:52:04 INFO  - Warden assigning student with ID 3 to room with ID 1
+2025-02-07 13:52:04 INFO  - Student with ID 3 successfully assigned to room with ID 1
+2025-02-07 13:54:04 INFO  - User authenticated
+2025-02-07 13:54:04 INFO  - Fetching all rooms
+2025-02-07 13:54:04 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:59:27 INFO  - Fetching all rooms
+2025-02-07 13:59:27 INFO  - Successfully fetched 15 rooms
+2025-02-07 13:59:30 INFO  - Warden assigning student with ID 1 to room with ID 2
+2025-02-07 13:59:37 INFO  - Warden assigning student with ID 5 to room with ID 4
+2025-02-07 13:59:37 INFO  - Student with ID 5 successfully assigned to room with ID 4
+2025-02-07 14:12:31 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 14:12:31 INFO  - Starting DormApp using Java 17.0.14 with PID 13648 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 14:12:31 INFO  - The following 1 profile is active: "test"
+2025-02-07 14:12:33 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:12:33 INFO  - Finished Spring Data repository scanning in 129 ms. Found 5 JPA repository interfaces.
+2025-02-07 14:12:34 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 14:12:35 INFO  - Root WebApplicationContext: initialization completed in 3248 ms
+2025-02-07 14:12:35 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 14:12:35 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 14:12:36 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:12:36 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 14:12:39 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:12:39 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:12:40 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:12:40 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:12:41 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:12:41 INFO  - Started DormApp in 11.038 seconds (process running for 11.801)
+2025-02-07 14:14:13 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 14:14:13 INFO  - Completed initialization in 7 ms
+2025-02-07 14:14:14 INFO  - Warden assigning student with ID 4 to room with ID 5
+2025-02-07 14:14:14 INFO  - Student with ID 4 successfully assigned to room with ID 5
+2025-02-07 14:21:31 INFO  - Warden assigning student with ID 2 to room with ID 2
+2025-02-07 14:24:25 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 14:26:05 INFO  - Fetching all rooms
+2025-02-07 14:26:05 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:26:17 INFO  - Warden assigning student with ID 1 to room with ID 2
+2025-02-07 14:34:17 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 14:34:18 INFO  - Starting DormApp using Java 17.0.14 with PID 7312 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 14:34:18 INFO  - The following 1 profile is active: "test"
+2025-02-07 14:34:20 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:34:20 INFO  - Finished Spring Data repository scanning in 118 ms. Found 5 JPA repository interfaces.
+2025-02-07 14:34:21 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 14:34:22 INFO  - Root WebApplicationContext: initialization completed in 3899 ms
+2025-02-07 14:34:22 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 14:34:22 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 14:34:23 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:34:24 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 14:34:26 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:34:28 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:34:29 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:34:29 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:34:30 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:34:30 INFO  - Started DormApp in 14.038 seconds (process running for 14.774)
+2025-02-07 14:38:00 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 14:38:00 INFO  - Starting DormApp using Java 17.0.14 with PID 14960 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 14:38:00 INFO  - The following 1 profile is active: "test"
+2025-02-07 14:38:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:38:02 INFO  - Finished Spring Data repository scanning in 114 ms. Found 5 JPA repository interfaces.
+2025-02-07 14:38:03 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 14:38:04 INFO  - Root WebApplicationContext: initialization completed in 3225 ms
+2025-02-07 14:38:05 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 14:38:05 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 14:38:06 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:38:06 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 14:38:08 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:38:08 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:38:09 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:38:09 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:38:10 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:38:11 INFO  - Started DormApp in 11.391 seconds (process running for 12.148)
+2025-02-07 14:49:21 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 14:49:21 INFO  - Starting DormApp using Java 17.0.14 with PID 15524 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 14:49:21 INFO  - The following 1 profile is active: "test"
+2025-02-07 14:49:22 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:49:23 INFO  - Finished Spring Data repository scanning in 127 ms. Found 5 JPA repository interfaces.
+2025-02-07 14:49:24 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 14:49:24 INFO  - Root WebApplicationContext: initialization completed in 3231 ms
+2025-02-07 14:49:25 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 14:49:25 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 14:49:25 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:49:26 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 14:49:28 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:49:28 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:49:29 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:49:29 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:49:30 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:49:30 INFO  - Started DormApp in 10.79 seconds (process running for 11.579)
+2025-02-07 14:51:29 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 14:51:29 INFO  - Completed initialization in 3 ms
+2025-02-07 14:53:40 INFO  - User authenticated
+2025-02-07 14:53:40 INFO  - Fetching all rooms
+2025-02-07 14:53:40 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 14:53:40 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:53:47 INFO  - Fetching all rooms
+2025-02-07 14:53:47 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:53:57 INFO  - Fetching all rooms
+2025-02-07 14:53:57 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:55:36 INFO  - User authenticated
+2025-02-07 14:55:36 INFO  - Fetching all rooms
+2025-02-07 14:55:36 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:55:56 INFO  - Fetching all rooms
+2025-02-07 14:55:56 INFO  - Successfully fetched 15 rooms
+2025-02-07 14:57:52 INFO  - User authenticated
+2025-02-07 14:57:52 INFO  - Fetching all rooms
+2025-02-07 14:57:52 INFO  - Successfully fetched 15 rooms
+2025-02-07 15:00:05 INFO  - Fetching all rooms
+2025-02-07 15:00:05 INFO  - Successfully fetched 15 rooms
+2025-02-07 15:04:21 INFO  - Fetching all rooms
+2025-02-07 15:04:21 INFO  - Successfully fetched 15 rooms
+2025-02-07 15:04:41 INFO  - Fetching all rooms
+2025-02-07 15:04:41 INFO  - Successfully fetched 15 rooms
+2025-02-07 17:26:51 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 17:26:52 INFO  - Starting DormApp using Java 17.0.14 with PID 9860 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 17:26:52 INFO  - The following 1 profile is active: "test"
+2025-02-07 17:26:53 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 17:26:54 INFO  - Finished Spring Data repository scanning in 147 ms. Found 5 JPA repository interfaces.
+2025-02-07 17:26:55 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 17:26:55 INFO  - Root WebApplicationContext: initialization completed in 3560 ms
+2025-02-07 17:26:56 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 17:26:56 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 17:26:56 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 17:26:57 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 17:27:00 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 17:27:00 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 17:27:01 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 17:27:01 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 17:27:02 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 17:27:03 INFO  - Started DormApp in 12.332 seconds (process running for 13.144)
+2025-02-07 17:28:10 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 17:28:10 INFO  - Completed initialization in 4 ms
+2025-02-07 17:28:11 INFO  - User authenticated
+2025-02-07 17:28:11 INFO  - Fetching all rooms
+2025-02-07 17:28:12 INFO  - Successfully fetched 15 rooms
+2025-02-07 17:28:12 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 17:55:34 INFO  - User authenticated
+2025-02-07 17:55:34 INFO  - Fetching all rooms
+2025-02-07 17:55:34 INFO  - Successfully fetched 15 rooms
+2025-02-07 17:58:19 INFO  - User authenticated
+2025-02-07 17:58:57 INFO  - Fetching all rooms
+2025-02-07 17:58:57 INFO  - Successfully fetched 15 rooms
+2025-02-07 17:59:18 INFO  - User authenticated
+2025-02-07 17:59:18 INFO  - Fetching all rooms
+2025-02-07 17:59:18 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:00:09 INFO  - Fetching all rooms
+2025-02-07 18:00:09 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:00:30 INFO  - User authenticated
+2025-02-07 18:00:30 INFO  - Fetching all rooms
+2025-02-07 18:00:30 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:01:30 INFO  - Fetching all rooms
+2025-02-07 18:01:30 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:02:07 INFO  - User authenticated
+2025-02-07 18:02:07 INFO  - Fetching all rooms
+2025-02-07 18:02:07 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:07:27 INFO  - Fetching all rooms
+2025-02-07 18:07:27 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:10:09 INFO  - Fetching all rooms
+2025-02-07 18:10:09 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:11:16 INFO  - User authenticated
+2025-02-07 18:11:16 INFO  - Fetching all rooms
+2025-02-07 18:11:16 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:13:32 INFO  - User authenticated
+2025-02-07 18:13:32 INFO  - Fetching all rooms
+2025-02-07 18:13:32 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:19:02 INFO  - User authenticated
+2025-02-07 18:19:02 INFO  - Fetching all rooms
+2025-02-07 18:19:02 INFO  - Successfully fetched 15 rooms
+2025-02-07 18:20:58 INFO  - User authenticated
+2025-02-07 18:20:58 INFO  - Fetching all rooms
+2025-02-07 18:20:58 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:01:04 INFO  - Fetching all rooms
+2025-02-07 19:01:05 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:10:33 INFO  - User authenticated
+2025-02-07 19:10:33 INFO  - Fetching all rooms
+2025-02-07 19:10:33 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:10:35 INFO  - Fetching all rooms
+2025-02-07 19:10:35 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:18:54 INFO  - User authenticated
+2025-02-07 19:18:54 INFO  - Fetching all rooms
+2025-02-07 19:18:54 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:18:57 INFO  - Fetching all rooms
+2025-02-07 19:18:57 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:19:44 INFO  - Fetching all rooms
+2025-02-07 19:19:44 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:20:08 INFO  - User authenticated
+2025-02-07 19:20:08 INFO  - Fetching all rooms
+2025-02-07 19:20:08 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:20:11 INFO  - Fetching all rooms
+2025-02-07 19:20:11 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:39:35 INFO  - User authenticated
+2025-02-07 19:39:35 INFO  - Fetching all rooms
+2025-02-07 19:39:35 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:40:29 INFO  - User authenticated
+2025-02-07 19:40:29 INFO  - Fetching all rooms
+2025-02-07 19:40:29 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:41:42 INFO  - User authenticated
+2025-02-07 19:41:42 INFO  - Fetching all rooms
+2025-02-07 19:41:43 INFO  - Successfully fetched 15 rooms
+2025-02-07 19:41:46 INFO  - Fetching all rooms
+2025-02-07 19:41:46 INFO  - Successfully fetched 15 rooms
+2025-02-07 20:04:29 INFO  - User authenticated
+2025-02-07 21:08:57 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 21:08:57 INFO  - Starting DormApp using Java 17.0.14 with PID 14368 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 21:08:57 INFO  - The following 1 profile is active: "test"
+2025-02-07 21:08:59 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 21:08:59 INFO  - Finished Spring Data repository scanning in 172 ms. Found 5 JPA repository interfaces.
+2025-02-07 21:09:02 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 21:09:02 INFO  - Root WebApplicationContext: initialization completed in 4632 ms
+2025-02-07 21:09:03 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 21:09:03 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 21:09:03 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 21:09:04 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 21:09:07 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 21:09:07 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 21:09:08 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 21:09:08 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 21:09:09 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 21:09:09 INFO  - Started DormApp in 13.372 seconds (process running for 14.398)
+2025-02-07 21:18:05 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 21:18:05 INFO  - Completed initialization in 3 ms
+2025-02-07 21:18:07 INFO  - User authenticated
+2025-02-07 21:18:27 INFO  - Fetching all rooms
+2025-02-07 21:18:27 INFO  - Successfully fetched 15 rooms
+2025-02-07 21:18:27 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 21:20:00 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 21:20:01 INFO  - Starting DormApp using Java 17.0.14 with PID 9028 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 21:20:01 INFO  - The following 1 profile is active: "test"
+2025-02-07 21:20:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 21:20:03 INFO  - Finished Spring Data repository scanning in 138 ms. Found 5 JPA repository interfaces.
+2025-02-07 21:20:04 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 21:20:04 INFO  - Root WebApplicationContext: initialization completed in 3705 ms
+2025-02-07 21:20:05 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 21:20:05 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 21:20:05 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 21:20:06 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 21:20:09 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 21:20:09 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 21:20:10 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 21:20:10 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 21:20:11 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 21:20:11 INFO  - Started DormApp in 11.873 seconds (process running for 12.586)
+2025-02-07 21:20:22 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 21:20:22 INFO  - Completed initialization in 2 ms
+2025-02-07 21:20:23 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-07 21:26:54 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-07 21:26:54 INFO  - Starting DormApp using Java 17.0.14 with PID 17096 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-07 21:26:54 INFO  - The following 1 profile is active: "test"
+2025-02-07 21:26:56 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 21:26:56 INFO  - Finished Spring Data repository scanning in 132 ms. Found 5 JPA repository interfaces.
+2025-02-07 21:26:58 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-07 21:26:58 INFO  - Root WebApplicationContext: initialization completed in 3384 ms
+2025-02-07 21:26:58 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-07 21:26:58 INFO  - HHH000026: Second-level cache disabled
+2025-02-07 21:26:59 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 21:27:00 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-07 21:27:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 21:27:02 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 21:27:03 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 21:27:03 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 21:27:05 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 21:27:05 INFO  - Started DormApp in 11.372 seconds (process running for 12.15)
+2025-02-07 21:27:38 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-07 21:27:38 INFO  - Completed initialization in 3 ms
+2025-02-07 21:27:39 INFO  - User authenticated
+2025-02-07 21:27:50 INFO  - Fetching all rooms
+2025-02-07 21:27:50 INFO  - Successfully fetched 15 rooms
+2025-02-07 21:27:50 WARN  - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+

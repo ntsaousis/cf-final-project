@@ -48,7 +48,6 @@ public class WardenService {
     @Transactional
     public RoomReadOnlyDTO assignStudentToRoom(Long studentId, Long roomId)
             throws AppObjectNotFoundException, AppObjectAlreadyExists {
-        LOGGER.info("Warden assigning student with ID {} to room with ID {}", studentId, roomId);
 
         Room room = roomRepository.findById(roomId)
                 .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
@@ -64,13 +63,19 @@ public class WardenService {
             throw new AppObjectAlreadyExists("ROOM", "Room with ID " + roomId + " is already full.");
         }
 
+        // Αναθέτουμε τον φοιτητή στο δωμάτιο
         student.setRoom(room);
         room.getStudents().add(student);
-        studentRepository.save(student);
 
-        LOGGER.info("Student with ID {} successfully assigned to room with ID {}", studentId, roomId);
+        // Μειώνουμε τη χωρητικότητα του δωματίου
+        room.setRoomCapacity(room.getRoomCapacity() - 1);
+
+        studentRepository.save(student);
+        roomRepository.save(room);
+
         return mapper.mapToReadOnlyRoomDTO(room);
     }
+
 
     @Transactional
     public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists {
@@ -142,7 +147,7 @@ public class WardenService {
 
         List<StudentReadOnlyDTO> students = room.getStudents().stream()
                 .map(mapper::mapToStudentReadOnlyDTO)
-                .peek(dto -> dto.setRoomId(roomId.toString())) // Ensure roomId is set
+                .peek(dto -> dto.setRoomId(roomId)) // Ensure roomId is set
                 .collect(Collectors.toList());
 
         LOGGER.info("Found {} students in room with ID {}", students.size(), roomId);

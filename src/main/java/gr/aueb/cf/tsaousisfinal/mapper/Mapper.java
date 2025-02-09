@@ -71,9 +71,19 @@ public class Mapper {
         userDTO.setUsername(student.getUser().getUsername());
         userDTO.setRole(student.getUser().getRole().name());
 
-
         studentReadOnlyDTO.setUser(userDTO);
+        if (student.getRoom() != null) {
+            RoomReadOnlyDTO roomDTO = new RoomReadOnlyDTO();
+            roomDTO.setRoomName(student.getRoom().getRoomName());
+            studentReadOnlyDTO.setRoom(roomDTO);
+        } else {
+            studentReadOnlyDTO.setRoom(null); // Ή άφησε το πεδίο `room` κενό
+        }
+
         return studentReadOnlyDTO;
+
+
+
 
     }
 

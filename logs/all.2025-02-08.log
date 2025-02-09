@@ -1,0 +1,31 @@
+2025-02-08 19:05:51 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-08 19:05:51 INFO  - Starting DormApp using Java 17.0.14 with PID 14772 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-08 19:05:51 INFO  - The following 1 profile is active: "test"
+2025-02-08 19:05:55 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-08 19:05:55 INFO  - Finished Spring Data repository scanning in 472 ms. Found 5 JPA repository interfaces.
+2025-02-08 19:05:58 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-08 19:05:58 INFO  - Root WebApplicationContext: initialization completed in 7108 ms
+2025-02-08 19:05:59 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-08 19:05:59 INFO  - HHH000026: Second-level cache disabled
+2025-02-08 19:05:59 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-08 19:06:00 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-08 19:06:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-08 19:06:03 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-08 19:06:03 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-08 19:06:03 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-08 19:06:04 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-08 19:06:04 INFO  - Started DormApp in 14.357 seconds (process running for 14.989)
+2025-02-08 19:07:33 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-08 19:07:33 INFO  - Completed initialization in 1 ms
+2025-02-08 19:54:37 WARN  - SQL Error: 1048, SQLState: 23000
+2025-02-08 19:54:37 ERROR - Column 'vat' cannot be null
+2025-02-08 20:59:47 INFO  - User authenticated
+2025-02-08 21:05:12 INFO  - User authenticated
+2025-02-08 21:06:15 INFO  - User authenticated

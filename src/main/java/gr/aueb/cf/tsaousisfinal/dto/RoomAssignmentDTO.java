@@ -6,17 +6,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-public class StudentReadOnlyDTO {
-
-    private Long id;
-    private String uuid;
+public class RoomAssignmentDTO {
 
 
-    private UserReadOnlyDTO user;
+    private Long studentId;
     private Long roomId;
-    private RoomReadOnlyDTO room;
 }

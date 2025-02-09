@@ -8,6 +8,10 @@ import gr.aueb.cf.tsaousisfinal.repositories.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -48,6 +52,10 @@ public class RoomService {
     @Transactional(readOnly = true, rollbackFor = Exception.class)
     public List<RoomReadOnlyDTO> getAllRooms() {
         LOGGER.info("Fetching all rooms");
+
+//        String defaultSort = "id";
+//        Pageable pageable = PageRequest.of(page, size, Sort.by(defaultSort).ascending());
+//        return roomRepository.findAll(pageable).map(entityMapper::mapToReadOnlyRoomDTO);
 
         List<Room> rooms = roomRepository.findAll();
         LOGGER.info("Successfully fetched {} rooms", rooms.size());
