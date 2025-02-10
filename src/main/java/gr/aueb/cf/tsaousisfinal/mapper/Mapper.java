@@ -105,7 +105,7 @@ public class Mapper {
     public RoomReadOnlyDTO mapToReadOnlyRoomDTO(Room room) {
         RoomReadOnlyDTO roomReadOnlyDTO = new RoomReadOnlyDTO();
 
-        roomReadOnlyDTO.setId(room.getId());
+        roomReadOnlyDTO.setRoomId(room.getId());
         roomReadOnlyDTO.setRoomName(room.getRoomName());
         roomReadOnlyDTO.setRoomCapacity(room.getRoomCapacity());
         roomReadOnlyDTO.setAvailable(room.getAvailable());

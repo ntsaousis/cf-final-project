@@ -12,9 +12,10 @@ import lombok.Setter;
 @Setter
 public class RoomReadOnlyDTO {
 
-    private Long id;
+
     private String roomName;
     private int roomCapacity;
+    private Long roomId;
 
     private Boolean available;
 }

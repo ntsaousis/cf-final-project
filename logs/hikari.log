@@ -1,508 +1,166 @@
-2025-02-09 10:42:43 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+2025-02-10 11:19:02 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
   context: ROOT
   delegate: true
 ----------> Parent Classloader:
 jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a
 
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/dormapptest?serverTimezone=UTC
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - username........................"springuser"
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
-2025-02-09 10:42:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-02-09 10:42:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b347439
-2025-02-09 10:42:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7dde8bd2
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1df1749d
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cb97dd2
-2025-02-09 10:42:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19bf8dc5
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37eceef
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b72ef8e
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e50ea3
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fda4577
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f20d9f4
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:43:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:43:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:43:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:43:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:44:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:44:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:44:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:44:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:45:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:45:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:45:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:45:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:46:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:46:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:46:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:46:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:47:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:47:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:47:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:47:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:48:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:48:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:48:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:48:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:49:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:49:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:49:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:49:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:50:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:50:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:50:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:50:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:51:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:51:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:51:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:51:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:52:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:52:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:52:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:52:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:53:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:53:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:53:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:53:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:54:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:54:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:54:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:54:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:55:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:55:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:55:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:55:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:56:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:56:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:56:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:56:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:57:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:57:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:57:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:57:45 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:58:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:58:15 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:58:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:58:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:59:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:59:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 10:59:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 10:59:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:00:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:00:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:00:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:00:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:01:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:01:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:01:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:01:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:02:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:02:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:02:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:02:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:03:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:03:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:03:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:03:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:04:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:04:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:04:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:04:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:05:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:05:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:05:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:05:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:06:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:06:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:06:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:06:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:07:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:07:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:07:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:07:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:08:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:08:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:08:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:08:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:09:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:09:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:09:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:09:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:10:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:10:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:10:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:10:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:11:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:11:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:11:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:11:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:12:01 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4f20d9f4: (connection has passed maxLifetime)
-2025-02-09 11:12:01 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1476d3b3
-2025-02-09 11:12:01 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:05 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5fda4577: (connection has passed maxLifetime)
-2025-02-09 11:12:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@554bd988
-2025-02-09 11:12:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:09 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7dde8bd2: (connection has passed maxLifetime)
-2025-02-09 11:12:09 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@356426c7
-2025-02-09 11:12:09 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:10 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3b347439: (connection has passed maxLifetime)
-2025-02-09 11:12:10 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a834b5a
-2025-02-09 11:12:10 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:10 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5cb97dd2: (connection has passed maxLifetime)
-2025-02-09 11:12:11 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b2d682d
-2025-02-09 11:12:11 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:12:16 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1df1749d: (connection has passed maxLifetime)
-2025-02-09 11:12:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d632d6
-2025-02-09 11:12:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19e50ea3: (connection has passed maxLifetime)
-2025-02-09 11:12:18 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749824c4
-2025-02-09 11:12:18 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@37eceef: (connection has passed maxLifetime)
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@273e32ef
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@b72ef8e: (connection has passed maxLifetime)
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@660338d4
-2025-02-09 11:12:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:43 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19bf8dc5: (connection has passed maxLifetime)
-2025-02-09 11:12:43 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e690292
-2025-02-09 11:12:43 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:12:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:13:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:13:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:13:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:13:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:14:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:14:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:14:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:14:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:15:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:15:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:15:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:15:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:16:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:16:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:16:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:16:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:17:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:17:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:17:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:17:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:18:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:18:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:18:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:18:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:19:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:19:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:19:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:19:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:20:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:20:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:20:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:20:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:21:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:21:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:21:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:21:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:22:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:22:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:22:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:22:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:23:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:23:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:23:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:23:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:24:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:24:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:24:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:24:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:25:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:25:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:25:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:25:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:26:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:26:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:26:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:26:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:27:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:27:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:27:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:27:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:28:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:28:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:28:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:28:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:29:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:29:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:29:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:29:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:30:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:30:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:30:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:30:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:31:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:31:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:31:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:31:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:32:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:32:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:32:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:32:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:33:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:33:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:33:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:33:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:34:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:34:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:34:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:34:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:35:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:35:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:35:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:35:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:36:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:36:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:36:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:36:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:37:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:37:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:37:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:37:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:38:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:38:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:38:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:38:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:39:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:39:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:39:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:39:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:40:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:40:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:40:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:40:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:41:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:41:26 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b2d682d: (connection has passed maxLifetime)
-2025-02-09 11:41:26 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749e0305
-2025-02-09 11:41:26 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:33 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1476d3b3: (connection has passed maxLifetime)
-2025-02-09 11:41:33 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c22a31f
-2025-02-09 11:41:33 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:35 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5a834b5a: (connection has passed maxLifetime)
-2025-02-09 11:41:35 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d1fa924
-2025-02-09 11:41:35 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:40 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@356426c7: (connection has passed maxLifetime)
-2025-02-09 11:41:40 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cf8649e
-2025-02-09 11:41:40 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:44 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@554bd988: (connection has passed maxLifetime)
-2025-02-09 11:41:44 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d30566b
-2025-02-09 11:41:44 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:46 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@d632d6: (connection has passed maxLifetime)
-2025-02-09 11:41:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ffe1854
-2025-02-09 11:41:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:41:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:41:54 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@749824c4: (connection has passed maxLifetime)
-2025-02-09 11:41:54 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e6e3590
-2025-02-09 11:41:54 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:01 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@273e32ef: (connection has passed maxLifetime)
-2025-02-09 11:42:01 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c964067
-2025-02-09 11:42:01 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:12 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@660338d4: (connection has passed maxLifetime)
-2025-02-09 11:42:12 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c67830f
-2025-02-09 11:42:13 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:42:34 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6e690292: (connection has passed maxLifetime)
-2025-02-09 11:42:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38489bea
-2025-02-09 11:42:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:42:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:43:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:43:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:43:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:43:46 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:44:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:44:16 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:44:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:44:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:45:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:45:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:45:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:45:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:46:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:46:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:46:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:46:47 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:47:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:47:17 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:47:49 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/dormapptest?serverTimezone=UTC
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - username........................"springuser"
+2025-02-10 11:19:03 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-02-10 11:19:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-10 11:19:04 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5896b9f5
+2025-02-10 11:19:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-10 11:19:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2025-02-10 11:19:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a63bc5
+2025-02-10 11:19:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=1, idle=1, waiting=0)
+2025-02-10 11:19:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6689c48a
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e4b83d4
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62c75eaa
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43a36c96
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@422560fd
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b4d0b4c
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d1c5ec
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22e7daa5
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:19:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:19:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:19:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:20:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:20:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:20:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:20:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:21:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:21:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:21:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:21:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:22:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:22:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:22:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:22:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:23:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:23:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:23:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:23:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:24:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:24:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:24:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:24:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:25:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:25:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:25:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:25:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:26:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:26:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:26:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:26:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:27:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:27:04 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:27:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:27:34 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:28:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:28:05 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:28:51 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader TomcatEmbeddedWebappClassLoader
   context: ROOT
   delegate: true
 ----------> Parent Classloader:
 jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a
 
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/dormapptest?serverTimezone=UTC
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - username........................"springuser"
-2025-02-09 11:47:50 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
-2025-02-09 11:47:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-02-09 11:47:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c5708e7
-2025-02-09 11:47:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f42f8cc
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=1, idle=1, waiting=0)
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f6d0783
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d29893
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b235c5f
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7887ad61
-2025-02-09 11:47:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d7cb879
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12296ad6
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f8a04e
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f47f9ca
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:47:52 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:48:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:48:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:48:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:48:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:49:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:49:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:49:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:49:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:50:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:50:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:50:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:50:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:51:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:51:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:51:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:51:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:52:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:52:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:52:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:52:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:53:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:53:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:53:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:53:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:54:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:54:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:54:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:54:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:55:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:55:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:55:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:55:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:56:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:56:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:56:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:56:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:57:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:57:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:57:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:57:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:58:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:58:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:58:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:58:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:59:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:59:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 11:59:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 11:59:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:00:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:00:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:00:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:00:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:01:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:01:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:01:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:01:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:02:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:02:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
-2025-02-09 12:02:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
-2025-02-09 12:02:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/dormapptest?serverTimezone=UTC
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - username........................"springuser"
+2025-02-10 11:28:52 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-02-10 11:28:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-10 11:28:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dd64243
+2025-02-10 11:28:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54acaa5
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@656535ea
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@550fd8d3
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@612b2c2e
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@241a723d
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d345756
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@622a87de
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a26e3a1
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d55e86d
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-02-10 11:28:53 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)

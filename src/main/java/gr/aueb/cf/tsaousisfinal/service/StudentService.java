@@ -86,11 +86,26 @@ public class StudentService {
         return mapper.mapToStudentReadOnlyDTO(student);
     }
 
+
+    public StudentReadOnlyDTO getStudentByUuid(String uuid) throws AppObjectNotFoundException {
+        Student student  = studentRepository.findByUuid(uuid)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found found" + uuid));
+        return mapper.mapToStudentReadOnlyDTO(student);
+    }
+
     @Transactional(readOnly = true)
     public List<StudentReadOnlyDTO> getAllStudents() throws IOException {
         return studentRepository.findAll().stream()
                 .map(mapper::mapToStudentReadOnlyDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public StudentReadOnlyDTO getStudentByUsername(String username) throws AppObjectNotFoundException {
+        Student student = studentRepository.findByUserUsername(username)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with username: " + username));
+
+        return mapper.mapToStudentReadOnlyDTO(student);
     }
 
 //    @Transactional
