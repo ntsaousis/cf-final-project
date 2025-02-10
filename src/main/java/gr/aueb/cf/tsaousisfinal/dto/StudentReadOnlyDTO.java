@@ -17,6 +17,6 @@ public class StudentReadOnlyDTO {
 
 
     private UserReadOnlyDTO user;
-    private Long roomId;
+
     private RoomReadOnlyDTO room;
 }

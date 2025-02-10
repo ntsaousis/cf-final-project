@@ -66,6 +66,7 @@ public class Mapper {
         studentReadOnlyDTO.setUuid(student.getUuid());
 
         UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
+        userDTO.setUserId(student.getUser().getId());
         userDTO.setFirstName(student.getUser().getFirstName());
         userDTO.setLastName(student.getUser().getLastName());
         userDTO.setUsername(student.getUser().getUsername());
@@ -74,7 +75,9 @@ public class Mapper {
         studentReadOnlyDTO.setUser(userDTO);
         if (student.getRoom() != null) {
             RoomReadOnlyDTO roomDTO = new RoomReadOnlyDTO();
+            roomDTO.setRoomId(student.getRoom().getId());
             roomDTO.setRoomName(student.getRoom().getRoomName());
+            roomDTO.setAvailable(student.getRoom().getAvailable());
             studentReadOnlyDTO.setRoom(roomDTO);
         } else {
             studentReadOnlyDTO.setRoom(null); // Ή άφησε το πεδίο `room` κενό
@@ -94,6 +97,7 @@ public class Mapper {
         wardenReadOnlyDTO.setUuid(warden.getUuid());
 
         UserReadOnlyDTO userDTO = new UserReadOnlyDTO();
+        userDTO.setUserId(warden.getUser().getId());
         userDTO.setFirstName(warden.getUser().getFirstName());
         userDTO.setLastName(warden.getUser().getLastName());
         userDTO.setUsername(warden.getUser().getUsername());

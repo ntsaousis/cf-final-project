@@ -5,6 +5,7 @@ import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
 import gr.aueb.cf.tsaousisfinal.dto.RoomAssignmentDTO;
 import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
+import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.service.RoomService;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,17 @@ public class RoomController {
 
         List<RoomReadOnlyDTO> roomsList = roomService.getAllRooms();
         return new ResponseEntity<>(roomsList, HttpStatus.OK);
+    }
+
+    @GetMapping("/{roomId}")
+    public ResponseEntity<List<StudentReadOnlyDTO>> getStudentsByRoom(@PathVariable Long roomId) {
+
+        try {
+            List<StudentReadOnlyDTO> studentsInRoom = wardenService.getStudentsInRoom(roomId);
+            return ResponseEntity.ok(studentsInRoom);
+        } catch (AppObjectNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @PostMapping("/assign")

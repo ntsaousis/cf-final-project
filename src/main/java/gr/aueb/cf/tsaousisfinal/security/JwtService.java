@@ -28,9 +28,10 @@ public class JwtService {
     private String issuer;
 
     // Generate token with username and role
-    public String generateToken(String username, String role) {
+    public String generateToken(String username, String role, Long id ) {
         var claims = new HashMap<String, Object>();
-        claims.put("role", role); // Add role as a custom claim
+        claims.put("role", role);
+        claims.put("userId", id);// Add role as a custom claim
 
         System.out.println("JWT Claims: " + claims); // Debug
 

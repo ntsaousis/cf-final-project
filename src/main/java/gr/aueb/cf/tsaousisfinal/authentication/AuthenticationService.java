@@ -34,7 +34,7 @@ public class AuthenticationService {
 //                .orElseThrow(() -> new AppObjectNotAuthorizedException("User", "User not authorized"));
 
         // If authentication was successful, generate JWT token
-        String token = jwtService.generateToken(authentication.getName(), user.getRole().name());
+        String token = jwtService.generateToken(authentication.getName(), user.getRole().name(), user.getId());
         return new AuthenticationResponseDTO(user.getFirstName(), user.getLastName(), token);
     }
 }

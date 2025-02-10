@@ -108,7 +108,7 @@ public class WardenService {
      * @param studentId the ID of the student
      * @return StudentReadOnlyDTO with updated student details
      */
-    @Transactional
+    @Transactional()
     public StudentReadOnlyDTO removeStudentFromRoom(Long studentId)
             throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
         LOGGER.info("Warden removing student with ID {} from their room", studentId);
@@ -127,10 +127,12 @@ public class WardenService {
         studentRepository.save(student);
 
         StudentReadOnlyDTO studentDTO = mapper.mapToStudentReadOnlyDTO(student);
-        studentDTO.setRoomId(null); // Explicitly set roomId to null
+        studentDTO.getRoom().setRoomId(null); // Explicitly set roomId to null
         LOGGER.info("Student with ID {} successfully removed from room", studentId);
         return studentDTO;
     }
+
+
 
     /**
      * Fetches a list of all students assigned to a specific room.
@@ -147,7 +149,7 @@ public class WardenService {
 
         List<StudentReadOnlyDTO> students = room.getStudents().stream()
                 .map(mapper::mapToStudentReadOnlyDTO)
-                .peek(dto -> dto.setRoomId(roomId)) // Ensure roomId is set
+                .peek(dto -> dto.getRoom().setRoomId(roomId)) // Ensure roomId is set
                 .collect(Collectors.toList());
 
         LOGGER.info("Found {} students in room with ID {}", students.size(), roomId);

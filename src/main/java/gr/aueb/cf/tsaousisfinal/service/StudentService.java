@@ -76,11 +76,9 @@ public class StudentService {
     }
 
 
-
-
     @Transactional(readOnly = true)
     public StudentReadOnlyDTO getStudentById(Long id) throws AppObjectNotFoundException {
-        Student student = studentRepository.findById(id)
+        Student student = studentRepository.findByUserId(id)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
 
         return mapper.mapToStudentReadOnlyDTO(student);
