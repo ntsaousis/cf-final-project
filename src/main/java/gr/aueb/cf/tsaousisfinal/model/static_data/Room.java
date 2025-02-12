@@ -24,14 +24,15 @@ public class Room {
     private String roomName;
 
     @Column(name = "room_capacity")
-    private int RoomCapacity;
+    private int roomCapacity;
+//    private int currentOccupancy;
 
 
     @Column(name = "available")
     private boolean available = true;
 
-    public boolean getAvailable() {
-        return this.students.size() < this.RoomCapacity; // Example logic
+    public boolean isAvailable() {
+        return this.students.size() < this.roomCapacity; // Example logic
     }
 
 
@@ -41,12 +42,12 @@ public class Room {
 
 //    @OneToMany(mappedBy = "complaint")
 //    private Set<Complaint> complaints = new HashSet<>();
-
-    @PostLoad
-    @PostUpdate
-    private void updateAvailability() {
-        this.available = students.size() < RoomCapacity;
-    }
+//
+//    @PostLoad
+//    @PostUpdate
+//    private void updateAvailability() {
+//        this.available = students.size() < roomCapacity;
+//    }
 
 
 }

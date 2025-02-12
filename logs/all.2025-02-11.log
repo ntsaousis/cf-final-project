@@ -1,0 +1,52 @@
+2025-02-11 20:03:35 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-11 20:03:35 INFO  - Starting DormApp using Java 17.0.14 with PID 12500 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-11 20:03:35 INFO  - The following 1 profile is active: "test"
+2025-02-11 20:03:36 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11 20:03:37 INFO  - Finished Spring Data repository scanning in 129 ms. Found 5 JPA repository interfaces.
+2025-02-11 20:03:38 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-11 20:03:38 INFO  - Root WebApplicationContext: initialization completed in 3257 ms
+2025-02-11 20:03:39 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-11 20:03:39 INFO  - HHH000026: Second-level cache disabled
+2025-02-11 20:03:39 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11 20:03:40 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-11 20:03:43 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11 20:03:43 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11 20:03:43 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-11 20:03:44 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-11 20:03:45 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-11 20:03:45 INFO  - Started DormApp in 11.359 seconds (process running for 12.07)
+2025-02-11 20:03:51 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-11 20:03:51 INFO  - Completed initialization in 4 ms
+2025-02-11 20:11:57 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-11 20:11:57 INFO  - Starting DormApp using Java 17.0.14 with PID 13016 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-11 20:11:57 INFO  - The following 1 profile is active: "test"
+2025-02-11 20:11:59 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11 20:11:59 INFO  - Finished Spring Data repository scanning in 169 ms. Found 5 JPA repository interfaces.
+2025-02-11 20:12:01 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-11 20:12:01 INFO  - Root WebApplicationContext: initialization completed in 4372 ms
+2025-02-11 20:12:02 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-11 20:12:02 INFO  - HHH000026: Second-level cache disabled
+2025-02-11 20:12:03 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11 20:12:04 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-11 20:12:07 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11 20:12:07 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11 20:12:08 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-11 20:12:08 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-11 20:12:10 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-11 20:12:10 INFO  - Started DormApp in 14.802 seconds (process running for 15.794)
+2025-02-11 20:12:18 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-11 20:12:18 INFO  - Completed initialization in 25 ms

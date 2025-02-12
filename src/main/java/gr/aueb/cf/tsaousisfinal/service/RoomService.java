@@ -79,7 +79,7 @@ public class RoomService {
         Room room = roomRepository.findById(roomId)
                 .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
 
-        boolean available = room.getStudents().size() < room.getRoomCapacity();
+        boolean available = room.isAvailable();
         LOGGER.info("Room with ID {} is {}available", roomId, available ? "" : "not ");
 
         return available;

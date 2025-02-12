@@ -92,7 +92,7 @@ public class StudentService {
     }
 
     @Transactional(readOnly = true)
-    public List<StudentReadOnlyDTO> getAllStudents() throws IOException {
+    public List<StudentReadOnlyDTO> getAllStudents()  {
         return studentRepository.findAll().stream()
                 .map(mapper::mapToStudentReadOnlyDTO)
                 .collect(Collectors.toList());

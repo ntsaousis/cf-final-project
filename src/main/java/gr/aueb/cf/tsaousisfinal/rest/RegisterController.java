@@ -1,6 +1,9 @@
 package gr.aueb.cf.tsaousisfinal.rest;
 
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.ValidationException;
 import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
@@ -33,7 +36,12 @@ public class RegisterController {
 
     // Endpoint για φοιτητές
     @PostMapping("/student")
-    public ResponseEntity<?> registerStudent(@Valid @RequestBody StudentInsertDTO studentInsertDTO) {
+    public ResponseEntity<?> registerStudent(@Valid @RequestBody StudentInsertDTO studentInsertDTO, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return new ResponseEntity<>(bindingResult.getAllErrors(), HttpStatus.BAD_REQUEST);
+        }
+
         try {
             StudentReadOnlyDTO registeredStudent = studentService.createStudent(studentInsertDTO);
             return new ResponseEntity<>(registeredStudent, HttpStatus.CREATED);
@@ -46,15 +54,16 @@ public class RegisterController {
 
     // Endpoint για επιμελητές
     @PostMapping("/warden")
-    public ResponseEntity<?> registerWarden(@Valid @RequestBody WardenInsertDTO wardenInsertDTO) {
-        try {
-            WardenReadOnlyDTO registeredWarden = wardenService.createWarden(wardenInsertDTO);
-            return new ResponseEntity<>(registeredWarden, HttpStatus.CREATED);
-        } catch (AppObjectAlreadyExists e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
-        } catch (Exception e) {
-            return new ResponseEntity<>("An error occurred: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<WardenReadOnlyDTO> registerWarden(@Valid @RequestBody WardenInsertDTO wardenInsertDTO, BindingResult bindingResult) throws AppObjectAlreadyExists
+        , AppObjectInvalidArgumentException, AppServerException, ValidationException {
+
+        if (bindingResult.hasErrors()) {
+            throw new ValidationException(bindingResult);
         }
+         WardenReadOnlyDTO registeredWarden = wardenService.createWarden(wardenInsertDTO);
+            return new ResponseEntity<>(registeredWarden, HttpStatus.CREATED);
+
+
     }
 }
 

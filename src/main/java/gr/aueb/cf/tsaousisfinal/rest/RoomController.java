@@ -8,6 +8,7 @@ import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.service.RoomService;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -44,7 +45,12 @@ public class RoomController {
     }
 
     @PostMapping("/assign")
-    public ResponseEntity<?> assignStudentToRoom(@RequestBody RoomAssignmentDTO request) {
+    public ResponseEntity<?> assignStudentToRoom(@Valid @RequestBody RoomAssignmentDTO request) {
+        System.out.println("Received assign request: " + request);
+        if (request.getRoomId() == null || request.getStudentId() == null) {
+            return ResponseEntity.badRequest().body("Invalid data: Missing roomId or studentId");
+        }
+
         try {
             RoomReadOnlyDTO room = wardenService.assignStudentToRoom(request.getStudentId(), request.getRoomId());
             return ResponseEntity.ok(room);

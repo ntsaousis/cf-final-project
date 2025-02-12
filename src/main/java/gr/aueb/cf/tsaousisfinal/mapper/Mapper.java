@@ -77,7 +77,7 @@ public class Mapper {
             RoomReadOnlyDTO roomDTO = new RoomReadOnlyDTO();
             roomDTO.setRoomId(student.getRoom().getId());
             roomDTO.setRoomName(student.getRoom().getRoomName());
-            roomDTO.setAvailable(student.getRoom().getAvailable());
+            roomDTO.setAvailable(student.getRoom().isAvailable());
             studentReadOnlyDTO.setRoom(roomDTO);
         } else {
             studentReadOnlyDTO.setRoom(null); // Ή άφησε το πεδίο `room` κενό
@@ -112,7 +112,7 @@ public class Mapper {
         roomReadOnlyDTO.setRoomId(room.getId());
         roomReadOnlyDTO.setRoomName(room.getRoomName());
         roomReadOnlyDTO.setRoomCapacity(room.getRoomCapacity());
-        roomReadOnlyDTO.setAvailable(room.getAvailable());
+        roomReadOnlyDTO.setAvailable(room.isAvailable());
         return roomReadOnlyDTO;
     }
 

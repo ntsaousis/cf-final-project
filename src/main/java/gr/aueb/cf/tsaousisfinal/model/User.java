@@ -51,8 +51,6 @@ public class User extends AbstractEntity implements UserDetails {
     @Column
     private GenderType genderType;
 
-
-
     @Enumerated(EnumType.STRING)
     @Column
     private RoleType role;

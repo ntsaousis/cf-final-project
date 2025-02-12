@@ -67,8 +67,8 @@ public class WardenService {
         student.setRoom(room);
         room.getStudents().add(student);
 
-        // Μειώνουμε τη χωρητικότητα του δωματίου
-        room.setRoomCapacity(room.getRoomCapacity() - 1);
+
+
 
         studentRepository.save(student);
         roomRepository.save(room);
@@ -78,7 +78,7 @@ public class WardenService {
 
 
     @Transactional
-    public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists {
+    public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists, AppObjectInvalidArgumentException {
         // Check if username already exists
         if (userRepository.findByUsername(wardenInsertDTO.getUser().getUsername()).isPresent()) {
             throw new AppObjectAlreadyExists("USERNAME", "Username already exists: " + wardenInsertDTO.getUser().getUsername());

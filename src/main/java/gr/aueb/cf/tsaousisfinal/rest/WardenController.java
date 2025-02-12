@@ -8,6 +8,7 @@ import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,15 +24,7 @@ public class WardenController {
 
     private final WardenService wardenService;
 
-    @PostMapping("/register")
-    public ResponseEntity<WardenReadOnlyDTO> createWarden(@RequestBody WardenInsertDTO wardenInsertDTO) {
-        try {
-            WardenReadOnlyDTO createdWarden = wardenService.createWarden(wardenInsertDTO);
-            return new ResponseEntity<>(createdWarden, HttpStatus.CREATED);
-        } catch (AppObjectAlreadyExists e) {
-            return new ResponseEntity<>(null, HttpStatus.CONFLICT);
-        }
-    }
+
 
 
 
