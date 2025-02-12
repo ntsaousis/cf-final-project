@@ -42,7 +42,7 @@ public class WardenService {
      * Assigns a student to a specific room.
      *
      * @param studentId the ID of the student
-     * @param roomId    the ID of the room
+     * @param roomId    the name of the room
      * @return RoomReadOnlyDTO with updated room details
      */
     @Transactional
@@ -63,12 +63,8 @@ public class WardenService {
             throw new AppObjectAlreadyExists("ROOM", "Room with ID " + roomId + " is already full.");
         }
 
-        // Αναθέτουμε τον φοιτητή στο δωμάτιο
         student.setRoom(room);
         room.getStudents().add(student);
-
-
-
 
         studentRepository.save(student);
         roomRepository.save(room);

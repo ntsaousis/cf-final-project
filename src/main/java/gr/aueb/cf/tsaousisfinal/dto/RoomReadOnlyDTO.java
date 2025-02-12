@@ -13,9 +13,8 @@ import lombok.Setter;
 public class RoomReadOnlyDTO {
 
 
+    private Long roomId;
     private String roomName;
     private int roomCapacity;
-    private Long roomId;
-
     private Boolean available;
 }

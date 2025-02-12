@@ -9,6 +9,8 @@ import java.util.Optional;
 
 public interface RoomRepository extends JpaRepository<Room, Long>, JpaSpecificationExecutor<Room> {
 
+    Optional<Room> findById(Long id);
+
 
 
 

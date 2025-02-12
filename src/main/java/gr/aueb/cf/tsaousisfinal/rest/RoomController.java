@@ -7,6 +7,7 @@ import gr.aueb.cf.tsaousisfinal.dto.RoomAssignmentDTO;
 import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.service.RoomService;
+import gr.aueb.cf.tsaousisfinal.service.StudentService;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,7 @@ public class RoomController {
 
     private final RoomService roomService;
     private final WardenService wardenService;
+    private final StudentService studentService;
 
     @GetMapping
     public ResponseEntity<List<RoomReadOnlyDTO>> getRooms(
@@ -58,6 +60,11 @@ public class RoomController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+//    @DeleteMapping"(/{studentId}")
+//    public ResponseEntity<StudentReadOnlyDTO> unassignStudentFromRoom(Long studentId) {
+//
+//        }
 
 
 
