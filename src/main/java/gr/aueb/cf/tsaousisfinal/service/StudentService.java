@@ -6,11 +6,14 @@ import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
 import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
+import gr.aueb.cf.tsaousisfinal.dto.StudentUpdateDTO;
 import gr.aueb.cf.tsaousisfinal.mapper.Mapper;
 import gr.aueb.cf.tsaousisfinal.model.Student;
 import gr.aueb.cf.tsaousisfinal.repositories.StudentRepository;
 import gr.aueb.cf.tsaousisfinal.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +29,8 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class StudentService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StudentService.class);
 
     private final StudentRepository studentRepository;
     private final UserRepository userRepository;
@@ -47,12 +52,18 @@ public class StudentService {
         // Check if VAT already exists
         userRepository.findByVat(studentInsertDTO.getUser().getVat())
                 .ifPresent(user -> {
+
                     try {
                         throw new AppObjectAlreadyExists("VAT", "VAT already exists: " + user.getVat());
                     } catch (AppObjectAlreadyExists e) {
                         throw new RuntimeException(e);
                     }
+
                 });
+        // Check if Email Already Exists
+
+//        userRepository.findByEmail(studentInsertDTO.getUser().getEmail())
+//                .ifPresent();
 
 
 
@@ -105,6 +116,20 @@ public class StudentService {
 
         return mapper.mapToStudentReadOnlyDTO(student);
     }
+
+    @Transactional
+    public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO) throws AppObjectNotFoundException {
+        Student student = studentRepository.findByUserId(id)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
+        if (studentUpdateDTO.getUserUpdateDTO().getEmail() != null) {
+            student.getUser().setEmail(studentUpdateDTO.getUserUpdateDTO().getEmail());
+        }
+
+
+        Student updatedStudent = studentRepository.save(student);
+        return mapper.mapToStudentReadOnlyDTO(updatedStudent);
+    }
+
 
 //    @Transactional
 //    public StudentReadOnlyDTO updateStudent(Long id, StudentInsertDTO studentInsertDTO)

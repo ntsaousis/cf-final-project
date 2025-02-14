@@ -1,0 +1,1424 @@
+2025-02-13 10:18:49 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 10:18:49 INFO  - Starting DormApp using Java 17.0.14 with PID 11120 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 10:18:49 INFO  - The following 1 profile is active: "test"
+2025-02-13 10:18:52 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 10:18:53 INFO  - Finished Spring Data repository scanning in 362 ms. Found 5 JPA repository interfaces.
+2025-02-13 10:18:56 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 10:18:57 INFO  - Root WebApplicationContext: initialization completed in 7127 ms
+2025-02-13 10:18:57 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 10:18:58 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 10:19:01 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 10:19:03 WARN  - SQL Error: 0, SQLState: 08S01
+2025-02-13 10:19:03 ERROR - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-02-13 10:19:03 WARN  - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at gr.aueb.cf.tsaousisfinal.DormApp.main(DormApp.java:12)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 120 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 133 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 136 common frames omitted
+2025-02-13 10:19:03 ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-02-13 10:19:03 ERROR - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-02-13 10:19:03 WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-02-13 10:19:03 ERROR - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at gr.aueb.cf.tsaousisfinal.DormApp.main(DormApp.java:12)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main\gr\aueb\cf\tsaousisfinal\authentication\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in gr.aueb.cf.tsaousisfinal.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 93 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	... 100 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 115 common frames omitted
+2025-02-13 10:22:03 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 10:22:04 INFO  - Starting DormApp using Java 17.0.14 with PID 6348 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 10:22:04 INFO  - The following 1 profile is active: "test"
+2025-02-13 10:22:06 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 10:22:06 INFO  - Finished Spring Data repository scanning in 171 ms. Found 5 JPA repository interfaces.
+2025-02-13 10:22:08 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 10:22:08 INFO  - Root WebApplicationContext: initialization completed in 4159 ms
+2025-02-13 10:22:08 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 10:22:09 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 10:22:10 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 10:22:11 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 10:22:14 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 10:22:14 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 10:22:15 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 10:22:16 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 10:22:18 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 10:22:18 INFO  - Started DormApp in 16.043 seconds (process running for 17.166)
+2025-02-13 10:23:15 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 10:23:15 INFO  - Completed initialization in 5 ms
+2025-02-13 10:29:54 INFO  - User authenticated
+2025-02-13 10:29:54 INFO  - Fetching all rooms
+2025-02-13 10:29:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 10:30:09 INFO  - Fetching all rooms
+2025-02-13 10:30:09 INFO  - Successfully fetched 15 rooms
+2025-02-13 10:33:48 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 10:33:48 INFO  - Starting DormApp using Java 17.0.14 with PID 12384 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 10:33:48 INFO  - The following 1 profile is active: "test"
+2025-02-13 10:33:50 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 10:33:50 INFO  - Finished Spring Data repository scanning in 147 ms. Found 5 JPA repository interfaces.
+2025-02-13 10:33:52 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 10:33:52 INFO  - Root WebApplicationContext: initialization completed in 4052 ms
+2025-02-13 10:33:53 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 10:33:53 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 10:33:54 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 10:33:55 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 10:33:58 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 10:33:58 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 10:33:59 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 10:33:59 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 10:34:01 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 10:34:01 INFO  - Started DormApp in 13.819 seconds (process running for 14.723)
+2025-02-13 10:34:15 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 10:34:15 INFO  - Completed initialization in 2 ms
+2025-02-13 10:35:21 INFO  - Fetching all rooms
+2025-02-13 10:35:21 INFO  - Successfully fetched 15 rooms
+2025-02-13 10:53:17 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 10:53:17 INFO  - Starting DormApp using Java 17.0.14 with PID 11120 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 10:53:17 INFO  - The following 1 profile is active: "test"
+2025-02-13 10:53:19 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 10:53:19 INFO  - Finished Spring Data repository scanning in 130 ms. Found 5 JPA repository interfaces.
+2025-02-13 10:53:21 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 10:53:21 INFO  - Root WebApplicationContext: initialization completed in 3823 ms
+2025-02-13 10:53:22 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 10:53:22 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 10:53:22 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 10:53:23 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 10:53:25 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 10:53:25 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 10:53:26 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 10:53:26 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 10:53:27 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 10:53:27 INFO  - Started DormApp in 11.811 seconds (process running for 12.759)
+2025-02-13 10:54:32 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 10:54:32 INFO  - Starting DormApp using Java 17.0.14 with PID 8344 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 10:54:32 INFO  - The following 1 profile is active: "test"
+2025-02-13 10:54:33 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 10:54:33 INFO  - Finished Spring Data repository scanning in 109 ms. Found 5 JPA repository interfaces.
+2025-02-13 10:54:35 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 10:54:35 INFO  - Root WebApplicationContext: initialization completed in 3176 ms
+2025-02-13 10:54:35 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 10:54:35 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 10:54:36 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 10:54:37 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 10:54:39 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 10:54:39 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 10:54:40 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 10:54:40 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 10:54:41 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 10:54:41 INFO  - Started DormApp in 10.8 seconds (process running for 11.565)
+2025-02-13 10:54:47 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 10:54:47 INFO  - Completed initialization in 3 ms
+2025-02-13 10:55:02 INFO  - Fetching all rooms
+2025-02-13 10:55:02 INFO  - Successfully fetched 15 rooms
+2025-02-13 10:57:22 INFO  - User authenticated
+2025-02-13 11:08:42 INFO  - User authenticated
+2025-02-13 11:26:25 WARN  - Request method 'POST' is not supported
+2025-02-13 11:27:35 INFO  - User authenticated
+2025-02-13 11:27:54 INFO  - User authenticated
+2025-02-13 11:27:54 INFO  - Fetching all rooms
+2025-02-13 11:27:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:29:40 INFO  - Fetching all rooms
+2025-02-13 11:29:40 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:31:00 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 11:31:00 INFO  - Starting DormApp using Java 17.0.14 with PID 3656 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 11:31:00 INFO  - The following 1 profile is active: "test"
+2025-02-13 11:31:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 11:31:02 INFO  - Finished Spring Data repository scanning in 220 ms. Found 5 JPA repository interfaces.
+2025-02-13 11:31:04 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 11:31:04 INFO  - Root WebApplicationContext: initialization completed in 4294 ms
+2025-02-13 11:31:05 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 11:31:05 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 11:31:06 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 11:31:07 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 11:31:10 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 11:31:10 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 11:31:11 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 11:31:11 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 11:31:13 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 11:31:13 INFO  - Started DormApp in 14.887 seconds (process running for 15.671)
+2025-02-13 11:31:21 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 11:31:21 INFO  - Completed initialization in 3 ms
+2025-02-13 11:31:21 INFO  - Fetching all rooms
+2025-02-13 11:31:22 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:32:27 INFO  - Fetching all rooms
+2025-02-13 11:32:27 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:35:40 INFO  - Fetching all rooms
+2025-02-13 11:35:40 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:37:52 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 11:37:52 INFO  - Starting DormApp using Java 17.0.14 with PID 5296 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 11:37:52 INFO  - The following 1 profile is active: "test"
+2025-02-13 11:37:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 11:37:54 INFO  - Finished Spring Data repository scanning in 109 ms. Found 5 JPA repository interfaces.
+2025-02-13 11:37:56 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 11:37:56 INFO  - Root WebApplicationContext: initialization completed in 3548 ms
+2025-02-13 11:37:56 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 11:37:56 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 11:37:57 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 11:37:59 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 11:38:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 11:38:02 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 11:38:03 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 11:38:04 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 11:38:05 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 11:38:05 INFO  - Started DormApp in 14.09 seconds (process running for 14.873)
+2025-02-13 11:38:18 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 11:38:18 INFO  - Completed initialization in 8 ms
+2025-02-13 11:38:18 INFO  - Fetching all rooms
+2025-02-13 11:38:18 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:42:48 INFO  - Fetching all rooms
+2025-02-13 11:42:48 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:45:18 INFO  - Fetching all rooms
+2025-02-13 11:45:18 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:53:55 INFO  - Fetching all rooms
+2025-02-13 11:53:55 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:55:48 INFO  - Fetching all rooms
+2025-02-13 11:55:48 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:59:22 INFO  - Fetching all rooms
+2025-02-13 11:59:22 INFO  - Successfully fetched 15 rooms
+2025-02-13 11:59:44 INFO  - Fetching all rooms
+2025-02-13 11:59:44 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:00:14 INFO  - Fetching all rooms
+2025-02-13 12:00:14 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:01:54 INFO  - Fetching all rooms
+2025-02-13 12:01:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:03:04 INFO  - Fetching all rooms
+2025-02-13 12:03:04 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:04:52 INFO  - Fetching all rooms
+2025-02-13 12:04:52 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:05:09 INFO  - Fetching all rooms
+2025-02-13 12:05:09 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:10:05 INFO  - Fetching all rooms
+2025-02-13 12:10:05 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:10:25 INFO  - Fetching all rooms
+2025-02-13 12:10:25 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:11:12 INFO  - Fetching all rooms
+2025-02-13 12:11:12 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:11:17 INFO  - Fetching all rooms
+2025-02-13 12:11:17 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:15:35 INFO  - Fetching all rooms
+2025-02-13 12:15:35 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:18:52 INFO  - Fetching all rooms
+2025-02-13 12:18:52 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:19:00 INFO  - Fetching all rooms
+2025-02-13 12:19:00 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:19:03 INFO  - Fetching all rooms
+2025-02-13 12:19:03 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:19:30 INFO  - Fetching all rooms
+2025-02-13 12:19:30 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:20:14 INFO  - Fetching all rooms
+2025-02-13 12:20:14 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:28:57 INFO  - Fetching all rooms
+2025-02-13 12:28:57 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:33:22 INFO  - User authenticated
+2025-02-13 12:33:22 INFO  - Fetching all rooms
+2025-02-13 12:33:22 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:46:39 INFO  - Fetching all rooms
+2025-02-13 12:46:39 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:49:00 INFO  - Fetching all rooms
+2025-02-13 12:49:00 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:49:09 INFO  - Fetching all rooms
+2025-02-13 12:49:09 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:50:21 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 12:50:21 INFO  - Starting DormApp using Java 17.0.14 with PID 7236 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 12:50:21 INFO  - The following 1 profile is active: "test"
+2025-02-13 12:50:23 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 12:50:23 INFO  - Finished Spring Data repository scanning in 126 ms. Found 5 JPA repository interfaces.
+2025-02-13 12:50:25 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 12:50:25 INFO  - Root WebApplicationContext: initialization completed in 3715 ms
+2025-02-13 12:50:26 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 12:50:26 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 12:50:27 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 12:50:28 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 12:50:32 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 12:50:32 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 12:50:33 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 12:50:33 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 12:50:34 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 12:50:35 INFO  - Started DormApp in 14.882 seconds (process running for 15.835)
+2025-02-13 12:50:40 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 12:50:40 INFO  - Completed initialization in 4 ms
+2025-02-13 12:50:41 INFO  - Fetching all rooms
+2025-02-13 12:50:41 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:50:44 INFO  - Fetching all rooms
+2025-02-13 12:50:44 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:51:17 INFO  - Fetching all rooms
+2025-02-13 12:51:17 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:52:49 INFO  - Fetching all rooms
+2025-02-13 12:52:49 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:52:52 INFO  - Fetching all rooms
+2025-02-13 12:52:52 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:53:58 INFO  - Fetching all rooms
+2025-02-13 12:53:58 INFO  - Successfully fetched 15 rooms
+2025-02-13 12:54:08 INFO  - Fetching all rooms
+2025-02-13 12:54:08 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:00:57 INFO  - User authenticated
+2025-02-13 13:00:57 INFO  - Fetching all rooms
+2025-02-13 13:00:57 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:03:54 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:03:55 INFO  - Starting DormApp using Java 17.0.14 with PID 2640 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:03:55 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:03:56 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:03:56 INFO  - Finished Spring Data repository scanning in 119 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:03:58 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:03:58 INFO  - Root WebApplicationContext: initialization completed in 3101 ms
+2025-02-13 13:03:58 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:03:58 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:03:59 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:04:00 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:04:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:04:02 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:04:03 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:04:03 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:04:04 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:04:04 INFO  - Started DormApp in 10.574 seconds (process running for 11.318)
+2025-02-13 13:04:14 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:04:14 INFO  - Completed initialization in 2 ms
+2025-02-13 13:04:34 INFO  - User authenticated
+2025-02-13 13:04:34 INFO  - Fetching all rooms
+2025-02-13 13:04:35 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:13:06 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:13:06 INFO  - Starting DormApp using Java 17.0.14 with PID 14388 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:13:06 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:13:07 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:13:08 INFO  - Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:13:09 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:13:09 INFO  - Root WebApplicationContext: initialization completed in 3208 ms
+2025-02-13 13:13:10 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:13:10 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:13:10 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:13:12 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:13:15 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:13:15 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:13:16 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:13:17 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:13:18 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:13:18 INFO  - Started DormApp in 13.56 seconds (process running for 14.258)
+2025-02-13 13:13:46 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:13:46 INFO  - Completed initialization in 2 ms
+2025-02-13 13:13:48 INFO  - User authenticated
+2025-02-13 13:13:48 INFO  - Fetching all rooms
+2025-02-13 13:13:48 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:13:48 INFO  - User authenticated
+2025-02-13 13:17:17 WARN  - Request method 'POST' is not supported
+2025-02-13 13:19:33 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:19:34 INFO  - Starting DormApp using Java 17.0.14 with PID 2928 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:19:34 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:19:35 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:19:35 INFO  - Finished Spring Data repository scanning in 134 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:19:37 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:19:37 INFO  - Root WebApplicationContext: initialization completed in 3384 ms
+2025-02-13 13:19:37 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:19:37 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:19:38 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:19:39 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:19:41 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:19:41 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:19:42 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:19:42 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:19:43 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:19:43 INFO  - Started DormApp in 11.146 seconds (process running for 12.218)
+2025-02-13 13:19:50 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:19:50 INFO  - Completed initialization in 2 ms
+2025-02-13 13:21:37 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:21:38 INFO  - Starting DormApp using Java 17.0.14 with PID 14900 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:21:38 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:21:39 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:21:39 INFO  - Finished Spring Data repository scanning in 128 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:21:41 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:21:41 INFO  - Root WebApplicationContext: initialization completed in 3363 ms
+2025-02-13 13:21:41 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:21:42 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:21:42 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:21:43 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:21:45 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:21:46 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:21:46 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:21:47 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:21:48 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:21:48 INFO  - Started DormApp in 11.263 seconds (process running for 11.968)
+2025-02-13 13:21:56 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:21:56 INFO  - Completed initialization in 3 ms
+2025-02-13 13:26:05 WARN  - Request method 'GET' is not supported
+2025-02-13 13:27:01 INFO  - User authenticated
+2025-02-13 13:27:02 INFO  - Fetching all rooms
+2025-02-13 13:27:02 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:39:33 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:39:33 INFO  - Starting DormApp using Java 17.0.14 with PID 4656 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:39:33 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:39:34 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:39:34 INFO  - Finished Spring Data repository scanning in 126 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:39:36 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:39:36 INFO  - Root WebApplicationContext: initialization completed in 3295 ms
+2025-02-13 13:39:36 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:39:36 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:39:37 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:39:38 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:39:40 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:39:40 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:39:41 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:39:41 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:39:42 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:39:42 INFO  - Started DormApp in 10.748 seconds (process running for 11.493)
+2025-02-13 13:39:49 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:39:49 INFO  - Completed initialization in 3 ms
+2025-02-13 13:41:00 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:41:00 INFO  - Starting DormApp using Java 17.0.14 with PID 3880 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:41:00 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:41:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:41:02 INFO  - Finished Spring Data repository scanning in 132 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:41:03 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:41:04 INFO  - Root WebApplicationContext: initialization completed in 3239 ms
+2025-02-13 13:41:04 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:41:04 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:41:05 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:41:05 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:41:08 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:41:08 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:41:08 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:41:09 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:41:10 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:41:10 INFO  - Started DormApp in 10.934 seconds (process running for 11.649)
+2025-02-13 13:42:06 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:42:06 INFO  - Completed initialization in 3 ms
+2025-02-13 13:42:07 INFO  - User authenticated
+2025-02-13 13:42:08 INFO  - Fetching all rooms
+2025-02-13 13:42:08 INFO  - Successfully fetched 15 rooms
+2025-02-13 13:46:47 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:46:47 INFO  - Starting DormApp using Java 17.0.14 with PID 4188 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:46:47 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:46:48 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:46:49 INFO  - Finished Spring Data repository scanning in 205 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:46:51 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:46:52 INFO  - Root WebApplicationContext: initialization completed in 4696 ms
+2025-02-13 13:46:52 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:46:53 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:46:54 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 13:46:55 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 13:46:59 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 13:46:59 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 13:47:00 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 13:47:01 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 13:47:03 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 13:47:03 INFO  - Started DormApp in 17.571 seconds (process running for 18.303)
+2025-02-13 13:47:09 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 13:47:09 INFO  - Completed initialization in 4 ms
+2025-02-13 13:59:54 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 13:59:54 INFO  - Starting DormApp using Java 17.0.14 with PID 15584 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 13:59:54 INFO  - The following 1 profile is active: "test"
+2025-02-13 13:59:56 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 13:59:56 INFO  - Finished Spring Data repository scanning in 149 ms. Found 5 JPA repository interfaces.
+2025-02-13 13:59:58 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 13:59:58 INFO  - Root WebApplicationContext: initialization completed in 4182 ms
+2025-02-13 13:59:58 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 13:59:58 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 13:59:59 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 14:00:00 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 14:00:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 14:00:02 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 14:00:03 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 14:00:03 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 14:00:04 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 14:00:04 INFO  - Started DormApp in 11.839 seconds (process running for 12.541)
+2025-02-13 14:00:26 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 14:00:26 INFO  - Completed initialization in 2 ms
+2025-02-13 14:00:27 INFO  - User authenticated
+2025-02-13 14:00:27 INFO  - Fetching all rooms
+2025-02-13 14:00:27 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:00:50 INFO  - Warden removing student with ID 2 from their room
+2025-02-13 14:01:26 INFO  - Fetching all rooms
+2025-02-13 14:01:26 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:01:45 INFO  - Warden removing student with ID 2 from their room
+2025-02-13 14:14:41 WARN  - Request method 'GET' is not supported
+2025-02-13 14:24:21 INFO  - Warden removing student with ID 2 from their room
+2025-02-13 14:24:54 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 14:24:54 INFO  - Starting DormApp using Java 17.0.14 with PID 16248 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 14:24:54 INFO  - The following 1 profile is active: "test"
+2025-02-13 14:24:56 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 14:24:56 INFO  - Finished Spring Data repository scanning in 120 ms. Found 5 JPA repository interfaces.
+2025-02-13 14:24:57 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 14:24:57 INFO  - Root WebApplicationContext: initialization completed in 3223 ms
+2025-02-13 14:24:58 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 14:24:58 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 14:24:58 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 14:24:59 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 14:25:02 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 14:25:02 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 14:25:02 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 14:25:03 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 14:25:04 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 14:25:04 INFO  - Started DormApp in 10.958 seconds (process running for 11.691)
+2025-02-13 14:26:00 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 14:26:00 INFO  - Completed initialization in 3 ms
+2025-02-13 14:26:01 INFO  - Warden removing student with ID 2 from their room
+2025-02-13 14:30:57 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 14:30:57 INFO  - Starting DormApp using Java 17.0.14 with PID 9908 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 14:30:57 INFO  - The following 1 profile is active: "test"
+2025-02-13 14:30:59 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 14:30:59 INFO  - Finished Spring Data repository scanning in 120 ms. Found 5 JPA repository interfaces.
+2025-02-13 14:31:00 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 14:31:00 INFO  - Root WebApplicationContext: initialization completed in 3307 ms
+2025-02-13 14:31:01 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 14:31:01 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 14:31:01 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 14:31:02 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 14:31:04 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 14:31:05 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 14:31:05 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 14:31:06 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 14:31:07 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 14:31:07 INFO  - Started DormApp in 10.854 seconds (process running for 11.57)
+2025-02-13 14:47:03 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 14:47:03 INFO  - Completed initialization in 5 ms
+2025-02-13 14:47:04 INFO  - Warden removing student with ID 2 from their room
+2025-02-13 14:47:04 INFO  - Removing student 2 from room 3
+2025-02-13 14:47:04 INFO  - Student with ID 2 successfully removed from room
+2025-02-13 14:48:41 INFO  - Fetching all rooms
+2025-02-13 14:48:41 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:48:44 INFO  - Fetching all rooms
+2025-02-13 14:48:44 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:49:44 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 14:49:44 INFO  - Starting DormApp using Java 17.0.14 with PID 1736 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 14:49:44 INFO  - The following 1 profile is active: "test"
+2025-02-13 14:49:46 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 14:49:46 INFO  - Finished Spring Data repository scanning in 116 ms. Found 5 JPA repository interfaces.
+2025-02-13 14:49:47 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 14:49:47 INFO  - Root WebApplicationContext: initialization completed in 3291 ms
+2025-02-13 14:49:48 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 14:49:48 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 14:49:48 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 14:49:49 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 14:49:51 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 14:49:52 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 14:49:52 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 14:49:53 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 14:49:54 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 14:49:54 INFO  - Started DormApp in 10.727 seconds (process running for 11.506)
+2025-02-13 14:50:19 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 14:50:19 INFO  - Completed initialization in 2 ms
+2025-02-13 14:50:20 INFO  - Warden removing student with ID 4 from their room
+2025-02-13 14:50:20 INFO  - Removing student 4 from room 3
+2025-02-13 14:50:20 INFO  - Student with ID 4 successfully removed from room
+2025-02-13 14:51:23 INFO  - Fetching all rooms
+2025-02-13 14:51:23 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:51:26 INFO  - Fetching all rooms
+2025-02-13 14:51:26 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:51:59 INFO  - Fetching all rooms
+2025-02-13 14:51:59 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:54:37 INFO  - Fetching all rooms
+2025-02-13 14:54:37 INFO  - Successfully fetched 15 rooms
+2025-02-13 14:58:51 INFO  - Warden removing student with ID 5 from their room
+2025-02-13 14:58:51 INFO  - Removing student 5 from room 2
+2025-02-13 14:58:51 INFO  - Student with ID 5 successfully removed from room
+2025-02-13 14:59:54 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 14:59:54 INFO  - Starting DormApp using Java 17.0.14 with PID 1320 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 14:59:54 INFO  - The following 1 profile is active: "test"
+2025-02-13 14:59:57 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 14:59:57 INFO  - Finished Spring Data repository scanning in 159 ms. Found 5 JPA repository interfaces.
+2025-02-13 14:59:59 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 14:59:59 INFO  - Root WebApplicationContext: initialization completed in 4870 ms
+2025-02-13 15:00:00 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 15:00:00 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 15:00:01 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 15:00:02 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 15:00:05 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 15:00:05 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 15:00:06 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 15:00:06 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 15:00:07 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 15:00:07 INFO  - Started DormApp in 14.2 seconds (process running for 15.125)
+2025-02-13 15:01:43 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 15:01:43 INFO  - Completed initialization in 3 ms
+2025-02-13 15:01:43 INFO  - Fetching all rooms
+2025-02-13 15:01:43 INFO  - Successfully fetched 15 rooms
+2025-02-13 15:02:07 INFO  - Warden removing student with ID 8 from their room
+2025-02-13 15:02:07 INFO  - Removing student 8 from room 5
+2025-02-13 15:02:07 INFO  - Student with ID 8 successfully removed from room
+2025-02-13 15:07:55 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 15:07:55 INFO  - Starting DormApp using Java 17.0.14 with PID 4592 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 15:07:55 INFO  - The following 1 profile is active: "test"
+2025-02-13 15:07:57 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 15:07:57 INFO  - Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2025-02-13 15:07:59 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 15:07:59 INFO  - Root WebApplicationContext: initialization completed in 3142 ms
+2025-02-13 15:07:59 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 15:07:59 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 15:08:00 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 15:08:01 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 15:08:03 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 15:08:03 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 15:08:04 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 15:08:04 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 15:08:05 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 15:08:05 INFO  - Started DormApp in 10.664 seconds (process running for 11.377)
+2025-02-13 15:08:18 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 15:08:18 INFO  - Completed initialization in 2 ms
+2025-02-13 15:08:19 INFO  - Warden removing student with ID 6 from their room
+2025-02-13 15:08:19 INFO  - Removing student 6 from room 5
+2025-02-13 15:08:19 INFO  - Student with ID 6 successfully removed from room
+2025-02-13 15:09:21 INFO  - Fetching all rooms
+2025-02-13 15:09:21 INFO  - Successfully fetched 15 rooms
+2025-02-13 15:14:03 INFO  - Fetching all rooms
+2025-02-13 15:14:03 INFO  - Successfully fetched 15 rooms
+2025-02-13 15:28:56 INFO  - Fetching all rooms
+2025-02-13 15:28:56 INFO  - Successfully fetched 15 rooms
+2025-02-13 15:29:57 INFO  - User authenticated
+2025-02-13 15:31:45 INFO  - User authenticated
+2025-02-13 15:31:45 INFO  - Fetching all rooms
+2025-02-13 15:31:45 INFO  - Successfully fetched 15 rooms
+2025-02-13 15:32:02 INFO  - Warden removing student with ID 7 from their room
+2025-02-13 15:32:02 INFO  - Removing student 7 from room 6
+2025-02-13 15:32:02 INFO  - Student with ID 7 successfully removed from room
+2025-02-13 16:54:51 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 16:54:51 INFO  - Starting DormApp using Java 17.0.14 with PID 480 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 16:54:51 INFO  - The following 1 profile is active: "test"
+2025-02-13 16:54:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 16:54:54 INFO  - Finished Spring Data repository scanning in 176 ms. Found 5 JPA repository interfaces.
+2025-02-13 16:54:56 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 16:54:56 INFO  - Root WebApplicationContext: initialization completed in 5014 ms
+2025-02-13 16:54:57 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 16:54:57 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 16:54:58 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 16:54:59 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 16:55:01 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 16:55:01 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 16:55:02 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 16:55:02 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 16:55:04 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 16:55:04 INFO  - Started DormApp in 14.268 seconds (process running for 15.092)
+2025-02-13 16:58:00 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 16:58:00 INFO  - Completed initialization in 2 ms
+2025-02-13 16:58:01 INFO  - User authenticated
+2025-02-13 16:58:01 INFO  - Fetching all rooms
+2025-02-13 16:58:01 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:02:04 INFO  - Fetching all rooms
+2025-02-13 17:02:04 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:04:28 INFO  - User authenticated
+2025-02-13 17:04:28 INFO  - Fetching all rooms
+2025-02-13 17:04:28 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:38:18 INFO  - Fetching all rooms
+2025-02-13 17:38:18 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:38:41 INFO  - Warden removing student with ID 9 from their room
+2025-02-13 17:38:41 INFO  - Removing student 9 from room 1
+2025-02-13 17:38:41 INFO  - Student with ID 9 successfully removed from room
+2025-02-13 17:39:35 INFO  - Warden removing student with ID 8 from their room
+2025-02-13 17:39:35 WARN  - Student with ID 8 is not assigned to any room.
+2025-02-13 17:39:35 ERROR - Error while unassigning student from room
+gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException: Student with ID 8 is not assigned to any room.
+	at gr.aueb.cf.tsaousisfinal.service.WardenService.removeStudentFromRoom(WardenService.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at gr.aueb.cf.tsaousisfinal.service.WardenService$$SpringCGLIB$$0.removeStudentFromRoom(<generated>)
+	at gr.aueb.cf.tsaousisfinal.rest.RoomController.unassignStudent(RoomController.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at gr.aueb.cf.tsaousisfinal.authentication.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-02-13 17:39:47 INFO  - Warden removing student with ID 5 from their room
+2025-02-13 17:39:47 INFO  - Removing student 5 from room 1
+2025-02-13 17:39:47 INFO  - Student with ID 5 successfully removed from room
+2025-02-13 17:39:59 INFO  - Warden removing student with ID 9 from their room
+2025-02-13 17:39:59 WARN  - Student with ID 9 is not assigned to any room.
+2025-02-13 17:39:59 ERROR - Error while unassigning student from room
+gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException: Student with ID 9 is not assigned to any room.
+	at gr.aueb.cf.tsaousisfinal.service.WardenService.removeStudentFromRoom(WardenService.java:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at gr.aueb.cf.tsaousisfinal.service.WardenService$$SpringCGLIB$$0.removeStudentFromRoom(<generated>)
+	at gr.aueb.cf.tsaousisfinal.rest.RoomController.unassignStudent(RoomController.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at gr.aueb.cf.tsaousisfinal.authentication.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-02-13 17:40:46 INFO  - Warden removing student with ID 6 from their room
+2025-02-13 17:40:46 INFO  - Removing student 6 from room 8
+2025-02-13 17:40:46 INFO  - Student with ID 6 successfully removed from room
+2025-02-13 17:47:34 INFO  - Fetching all rooms
+2025-02-13 17:47:34 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:48:31 INFO  - Fetching all rooms
+2025-02-13 17:48:31 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:49:09 INFO  - Warden removing student with ID 6 from their room
+2025-02-13 17:49:09 INFO  - Removing student 6 from room 10
+2025-02-13 17:49:09 INFO  - Student with ID 6 successfully removed from room
+2025-02-13 17:49:56 INFO  - User authenticated
+2025-02-13 17:49:56 INFO  - Fetching all rooms
+2025-02-13 17:49:56 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:52:02 INFO  - Fetching all rooms
+2025-02-13 17:52:02 INFO  - Successfully fetched 15 rooms
+2025-02-13 17:53:53 INFO  - Warden removing student with ID 3 from their room
+2025-02-13 17:53:53 INFO  - Removing student 3 from room 3
+2025-02-13 17:53:53 INFO  - Student with ID 3 successfully removed from room
+2025-02-13 18:06:23 INFO  - Fetching all rooms
+2025-02-13 18:06:23 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:07:04 INFO  - User authenticated
+2025-02-13 18:07:04 INFO  - Fetching all rooms
+2025-02-13 18:07:04 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:10:54 INFO  - Fetching all rooms
+2025-02-13 18:10:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:13:43 INFO  - Fetching all rooms
+2025-02-13 18:13:43 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:13:51 INFO  - Warden removing student with ID 1 from their room
+2025-02-13 18:13:51 INFO  - Removing student 1 from room 5
+2025-02-13 18:13:51 INFO  - Student with ID 1 successfully removed from room
+2025-02-13 18:26:07 INFO  - Fetching all rooms
+2025-02-13 18:26:07 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:32:43 INFO  - Fetching all rooms
+2025-02-13 18:32:43 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:35:54 INFO  - Fetching all rooms
+2025-02-13 18:35:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 18:48:54 INFO  - Fetching all rooms
+2025-02-13 18:48:54 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:26:31 INFO  - Fetching all rooms
+2025-02-13 19:26:31 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:27:43 INFO  - User authenticated
+2025-02-13 19:27:43 INFO  - Fetching all rooms
+2025-02-13 19:27:43 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:30:39 INFO  - Fetching all rooms
+2025-02-13 19:30:39 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:42:14 INFO  - Fetching all rooms
+2025-02-13 19:42:14 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:43:01 INFO  - User authenticated
+2025-02-13 19:43:01 INFO  - Fetching all rooms
+2025-02-13 19:43:01 INFO  - Successfully fetched 15 rooms
+2025-02-13 19:45:08 INFO  - User authenticated
+2025-02-13 19:45:08 INFO  - Fetching all rooms
+2025-02-13 19:45:08 INFO  - Successfully fetched 15 rooms
+2025-02-13 20:04:28 INFO  - Fetching all rooms
+2025-02-13 20:04:28 INFO  - Successfully fetched 15 rooms
+2025-02-13 20:11:49 INFO  - Fetching all rooms
+2025-02-13 20:11:49 INFO  - Successfully fetched 15 rooms
+2025-02-13 20:36:32 INFO  - Fetching all rooms
+2025-02-13 20:36:32 INFO  - Successfully fetched 15 rooms
+2025-02-13 20:44:37 INFO  - Fetching all rooms
+2025-02-13 20:44:37 INFO  - Successfully fetched 15 rooms
+2025-02-13 21:36:15 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 21:36:15 INFO  - Starting DormApp using Java 17.0.14 with PID 12012 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 21:36:15 INFO  - The following 1 profile is active: "test"
+2025-02-13 21:36:17 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 21:36:17 INFO  - Finished Spring Data repository scanning in 158 ms. Found 5 JPA repository interfaces.
+2025-02-13 21:36:19 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 21:36:19 INFO  - Root WebApplicationContext: initialization completed in 3378 ms
+2025-02-13 21:36:19 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 21:36:19 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 21:36:20 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 21:36:21 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 21:36:23 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 21:36:23 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 21:36:24 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 21:36:24 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 21:36:25 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 21:36:25 INFO  - Started DormApp in 11.502 seconds (process running for 12.252)
+2025-02-13 21:37:02 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 21:37:02 INFO  - Completed initialization in 5 ms
+2025-02-13 21:37:02 INFO  - Fetching all rooms
+2025-02-13 21:37:02 INFO  - Successfully fetched 15 rooms
+2025-02-13 21:57:17 INFO  - HV000001: Hibernate Validator 8.0.2.Final
+2025-02-13 21:57:17 INFO  - Starting DormApp using Java 17.0.14 with PID 6112 (C:\Users\Me\IdeaProjects\tsaousis-final\build\classes\java\main started by Me in C:\Users\Me\IdeaProjects\tsaousis-final)
+2025-02-13 21:57:17 INFO  - The following 1 profile is active: "test"
+2025-02-13 21:57:19 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 21:57:19 INFO  - Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2025-02-13 21:57:21 INFO  - Tomcat initialized with port 8080 (http)
+2025-02-13 21:57:21 INFO  - Root WebApplicationContext: initialization completed in 3730 ms
+2025-02-13 21:57:22 INFO  - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-13 21:57:22 INFO  - HHH000026: Second-level cache disabled
+2025-02-13 21:57:22 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 21:57:23 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.38
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 21:57:25 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 21:57:26 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 21:57:26 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-13 21:57:27 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-13 21:57:28 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-02-13 21:57:28 INFO  - Started DormApp in 12.482 seconds (process running for 13.311)
+2025-02-13 21:57:45 INFO  - Initializing Servlet 'dispatcherServlet'
+2025-02-13 21:57:45 INFO  - Completed initialization in 4 ms
+2025-02-13 21:57:45 INFO  - Fetching all rooms
+2025-02-13 21:57:46 INFO  - Successfully fetched 15 rooms

@@ -3,6 +3,7 @@ package gr.aueb.cf.tsaousisfinal.service;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
 import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
@@ -46,7 +47,7 @@ public class WardenService {
      * @return RoomReadOnlyDTO with updated room details
      */
     @Transactional
-    public RoomReadOnlyDTO assignStudentToRoom(Long studentId, Long roomId)
+    public RoomReadOnlyDTO assignStudent(Long studentId, Long roomId)
             throws AppObjectNotFoundException, AppObjectAlreadyExists {
 
         Room room = roomRepository.findById(roomId)
@@ -59,7 +60,7 @@ public class WardenService {
             throw new AppObjectAlreadyExists("STUDENT", "Student with ID " + studentId + " is already assigned to a room.");
         }
 
-        if (room.getStudents().size() >= room.getRoomCapacity()) {
+        if (!isRoomAvailable(roomId)) {
             throw new AppObjectAlreadyExists("ROOM", "Room with ID " + roomId + " is already full.");
         }
 
@@ -102,31 +103,37 @@ public class WardenService {
      * Removes a student from their assigned room.
      *
      * @param studentId the ID of the student
-     * @return StudentReadOnlyDTO with updated student details
      */
     @Transactional()
-    public StudentReadOnlyDTO removeStudentFromRoom(Long studentId)
-            throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
-        LOGGER.info("Warden removing student with ID {} from their room", studentId);
+    public StudentReadOnlyDTO removeStudentFromRoom(Long studentId) throws AppServerException {
+        try {
+            LOGGER.info("Warden removing student with ID {} from their room", studentId);
 
-        Student student = studentRepository.findById(studentId)
-                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student with ID " + studentId + " not found."));
+            Student student = studentRepository.findById(studentId)
+                    .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student with ID " + studentId + " not found."));
 
-        Room room = student.getRoom();
+            Room room = student.getRoom();
 
-        if (room == null) {
-            throw new AppObjectInvalidArgumentException("STUDENT", "Student with ID " + studentId + " is not assigned to any room.");
+            if (room == null) {
+                LOGGER.warn("Student with ID {} is not assigned to any room.", studentId);
+                throw new AppObjectInvalidArgumentException("STUDENT", "Student with ID " + studentId + " is not assigned to any room.");
+            }
+
+            LOGGER.info("Removing student {} from room {}", studentId, room.getId());
+            room.getStudents().remove(student);
+            student.setRoom(null);
+            studentRepository.save(student);
+            LOGGER.info("Student with ID {} successfully removed from room", studentId);
+            return mapper.mapToStudentReadOnlyDTO(student);
+
+        } catch (Exception e) {
+            LOGGER.error("Error while unassigning student from room", e);
+            throw new AppServerException("UNASSIGN_ERROR", "Could not unassign student from room");
         }
-
-        room.getStudents().remove(student);
-        student.setRoom(null);
-        studentRepository.save(student);
-
-        StudentReadOnlyDTO studentDTO = mapper.mapToStudentReadOnlyDTO(student);
-        studentDTO.getRoom().setRoomId(null); // Explicitly set roomId to null
-        LOGGER.info("Student with ID {} successfully removed from room", studentId);
-        return studentDTO;
     }
+
+
+
 
 
 

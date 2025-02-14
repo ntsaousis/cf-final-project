@@ -6,6 +6,7 @@ import gr.aueb.cf.tsaousisfinal.authentication.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -48,13 +49,12 @@ public class SecurityConfiguration {
                         .accessDeniedHandler(myCustomAccessDeniedHandler()))
                 .exceptionHandling((exceptions) -> exceptions.authenticationEntryPoint(myCustomAuthenticationEntryPoint()))
                 .authorizeHttpRequests(req -> req
-                                .requestMatchers("/api/students/register").permitAll()
-                                .requestMatchers("/api/wardens/register").permitAll()
+                                .requestMatchers("/api/register").permitAll()
                                 .requestMatchers("/api/auth/authenticate").permitAll()
-                                .requestMatchers("/api/wardens/**").hasAnyAuthority(RoleType.WARDEN.name(), RoleType.ADMIN.name())
+                                .requestMatchers("/api/wardens/**").hasRole(RoleType.WARDEN.name())
                                 .requestMatchers("/api/students/**").permitAll()   //hasAuthority(RoleType.STUDENT.name())
-                                .requestMatchers("/api/rooms/assign").permitAll()
-                                .requestMatchers("/api/rooms/").hasAnyAuthority(RoleType.WARDEN.name())
+                                .requestMatchers("/api/rooms/assign").hasRole(RoleType.WARDEN.name())
+                                .requestMatchers("/api/rooms/unassign/{id}").hasRole(RoleType.WARDEN.name())
                                 .requestMatchers("/**").permitAll() // static resources
                         //.authenticated()
                 )

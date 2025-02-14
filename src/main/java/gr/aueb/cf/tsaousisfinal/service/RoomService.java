@@ -8,10 +8,6 @@ import gr.aueb.cf.tsaousisfinal.repositories.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,24 +21,6 @@ public class RoomService {
     private static final Logger LOGGER = LoggerFactory.getLogger(RoomService.class);
     private final RoomRepository roomRepository;
     private final Mapper entityMapper;
-
-    /**
-     * Retrieves details of a static room by ID.
-     *
-     * @param roomId the ID of the room
-     * @return RoomReadOnlyDTO with room details
-     * @throws AppObjectNotFoundException if the room is not found
-     */
-    @Transactional(readOnly = true)
-    public RoomReadOnlyDTO getRoomDetails(Long roomId) throws AppObjectNotFoundException {
-        LOGGER.info("Fetching details for room with ID {}", roomId);
-
-        Room room = roomRepository.findById(roomId)
-                .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
-
-        LOGGER.info("Successfully fetched details for room with ID {}", roomId);
-        return entityMapper.mapToReadOnlyRoomDTO(room);
-    }
 
     /**
      * Fetches a list of all rooms.
