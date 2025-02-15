@@ -19,14 +19,11 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 
-import java.io.IOException;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 
 
 
-  @RestController
+@RestController
 @RequestMapping("/api/register")
 @RequiredArgsConstructor
 public class RegisterController {
@@ -55,7 +52,7 @@ public class RegisterController {
     // Endpoint για επιμελητές
     @PostMapping("/warden")
     public ResponseEntity<WardenReadOnlyDTO> registerWarden(@Valid @RequestBody WardenInsertDTO wardenInsertDTO, BindingResult bindingResult) throws AppObjectAlreadyExists
-        , AppObjectInvalidArgumentException, AppServerException, ValidationException {
+        , AppObjectInvalidArgumentException, ValidationException {
 
         if (bindingResult.hasErrors()) {
             throw new ValidationException(bindingResult);

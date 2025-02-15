@@ -39,14 +39,11 @@ public class RoomController {
     }
 
     @GetMapping("/{roomId}")
-    public ResponseEntity<List<StudentReadOnlyDTO>> getStudentsByRoom(@PathVariable Long roomId) {
+    public ResponseEntity<List<StudentReadOnlyDTO>> getStudentsByRoom(@PathVariable Long roomId) throws AppObjectNotFoundException  {
 
-        try {
             List<StudentReadOnlyDTO> studentsInRoom = wardenService.getStudentsInRoom(roomId);
             return ResponseEntity.ok(studentsInRoom);
-        } catch (AppObjectNotFoundException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+
     }
 
     @PostMapping("/assign")
