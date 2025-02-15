@@ -71,6 +71,7 @@ public class Mapper {
         userDTO.setLastName(student.getUser().getLastName());
         userDTO.setUsername(student.getUser().getUsername());
         userDTO.setRole(student.getUser().getRole().name());
+        userDTO.setEmail(student.getUser().getEmail());
 
         studentReadOnlyDTO.setUser(userDTO);
         if (student.getRoom() != null) {

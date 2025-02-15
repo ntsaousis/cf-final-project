@@ -121,19 +121,14 @@ public class StudentService {
     public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO)
             throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
 
-        // Validate DTO
-        if (studentUpdateDTO == null || studentUpdateDTO.getUserUpdateDTO() == null) {
-            throw new AppObjectInvalidArgumentException("STUDENT","Email cannot be null");
-        }
 
         Student student = studentRepository.findByUserId(id)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
 
         // Update email if provided
-        String newEmail = studentUpdateDTO.getUserUpdateDTO().getEmail();
-        if (newEmail != null && !newEmail.trim().isEmpty()) {
-            student.getUser().setEmail(newEmail);
-        }
+        ;
+        student.getUser().setEmail(studentUpdateDTO.getUser().getEmail());
+
 
         // Save changes
         Student updatedStudent = studentRepository.save(student);

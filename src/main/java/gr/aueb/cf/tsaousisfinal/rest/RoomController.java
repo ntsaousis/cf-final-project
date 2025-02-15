@@ -28,7 +28,6 @@ public class RoomController {
 
     private final RoomService roomService;
     private final WardenService wardenService;
-    private final StudentService studentService;
 
     @GetMapping
     public ResponseEntity<List<RoomReadOnlyDTO>> getRooms(
@@ -50,9 +49,7 @@ public class RoomController {
     public ResponseEntity<?> assignStudentToRoom(@Valid @RequestBody RoomAssignmentDTO request) throws
             AppObjectNotFoundException, AppObjectAlreadyExists {
         System.out.println("Received assign request: " + request.getStudentId());
-        if (request.getRoomId() == null || request.getStudentId() == null) {
-            return ResponseEntity.badRequest().body("Invalid data: Missing roomId or studentId");
-        }
+
 
         RoomReadOnlyDTO room = wardenService.assignStudent(request.getStudentId(), request.getRoomId());
         return ResponseEntity.ok(room);

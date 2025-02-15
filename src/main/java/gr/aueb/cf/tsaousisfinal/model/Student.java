@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -36,6 +37,7 @@ public class Student extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
+
 
 //    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
 //    private Set<Complaint> complaints = new HashSet<>();

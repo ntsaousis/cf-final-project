@@ -12,5 +12,5 @@ import lombok.Setter;
 public class StudentUpdateDTO {
 
    @Valid
-   private UserUpdateDTO userUpdateDTO;
+   private UserUpdateDTO user;
 }

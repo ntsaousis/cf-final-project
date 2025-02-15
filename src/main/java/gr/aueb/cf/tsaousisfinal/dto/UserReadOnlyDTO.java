@@ -19,4 +19,5 @@ public class UserReadOnlyDTO {
     private String lastName;
     private String username;
     private String role;
+    private String Email;
 }
