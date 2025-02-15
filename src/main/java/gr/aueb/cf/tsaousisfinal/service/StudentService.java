@@ -118,17 +118,28 @@ public class StudentService {
     }
 
     @Transactional
-    public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO) throws AppObjectNotFoundException {
-        Student student = studentRepository.findByUserId(id)
-                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
-        if (studentUpdateDTO.getUserUpdateDTO().getEmail() != null) {
-            student.getUser().setEmail(studentUpdateDTO.getUserUpdateDTO().getEmail());
+    public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO)
+            throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
+
+        // Validate DTO
+        if (studentUpdateDTO == null || studentUpdateDTO.getUserUpdateDTO() == null) {
+            throw new AppObjectInvalidArgumentException("STUDENT","Email cannot be null");
         }
 
+        Student student = studentRepository.findByUserId(id)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
 
+        // Update email if provided
+        String newEmail = studentUpdateDTO.getUserUpdateDTO().getEmail();
+        if (newEmail != null && !newEmail.trim().isEmpty()) {
+            student.getUser().setEmail(newEmail);
+        }
+
+        // Save changes
         Student updatedStudent = studentRepository.save(student);
         return mapper.mapToStudentReadOnlyDTO(updatedStudent);
     }
+
 
 
 //    @Transactional

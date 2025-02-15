@@ -1,6 +1,7 @@
 package gr.aueb.cf.tsaousisfinal.rest;
 
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.ValidationException;
 import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
@@ -33,32 +34,27 @@ public class StudentRestController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<StudentReadOnlyDTO> getStudentById(@PathVariable Long id) {
-        try {
-            StudentReadOnlyDTO student = studentService.getStudentById(id);
-            return new ResponseEntity<>(student, HttpStatus.OK);
-        } catch (AppObjectNotFoundException e) {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        }
+    public ResponseEntity<StudentReadOnlyDTO> getStudentById(@PathVariable Long id) throws AppObjectNotFoundException {
+
+        StudentReadOnlyDTO student = studentService.getStudentById(id);
+
+         return new ResponseEntity<>(student, HttpStatus.OK);
+
     }
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<StudentReadOnlyDTO> updateStudent(@PathVariable Long id, @RequestBody StudentUpdateDTO studentUpdateDTO,
-                                                            BindingResult bindingResult) throws ValidationException, AppObjectNotFoundException {
+    public ResponseEntity<StudentReadOnlyDTO> updateStudent(@PathVariable Long id,
+                                                            @Valid @RequestBody StudentUpdateDTO studentUpdateDTO,
+                                                            BindingResult bindingResult)
+            throws ValidationException, AppObjectNotFoundException, AppObjectInvalidArgumentException {
 
         if (bindingResult.hasErrors()) {
             throw new ValidationException(bindingResult);
         }
 
-        try {
-            StudentReadOnlyDTO updatedStudent = studentService.updateStudent(id, studentUpdateDTO);
+        StudentReadOnlyDTO updatedStudent = studentService.updateStudent(id, studentUpdateDTO);
             return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
-        } catch (AppObjectNotFoundException e) {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-
-        }
-
 
     }
 
