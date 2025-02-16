@@ -33,6 +33,7 @@ public class WardenService {
     private static final Logger LOGGER = LoggerFactory.getLogger(WardenService.class);
 
     private final RoomRepository roomRepository;
+    private final RoomService roomService;
     private final StudentRepository studentRepository;
     private final UserRepository userRepository;
     private final WardenRepository wardenRepository;
@@ -60,7 +61,7 @@ public class WardenService {
             throw new AppObjectAlreadyExists("STUDENT", "Student with ID " + studentId + " is already assigned to a room.");
         }
 
-        if (!isRoomAvailable(roomId)) {
+        if (!roomService.isRoomAvailable(roomId)) {
             throw new AppObjectAlreadyExists("ROOM", "Room with ID " + roomId + " is already full.");
         }
 
@@ -75,15 +76,19 @@ public class WardenService {
 
 
     @Transactional
-    public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists, AppObjectInvalidArgumentException {
+    public WardenReadOnlyDTO createWarden(WardenInsertDTO wardenInsertDTO) throws AppObjectAlreadyExists {
         // Check if username already exists
         if (userRepository.findByUsername(wardenInsertDTO.getUser().getUsername()).isPresent()) {
-            throw new AppObjectAlreadyExists("USERNAME", "Username already exists: " + wardenInsertDTO.getUser().getUsername());
+            throw new AppObjectAlreadyExists("WARDEN", "Warden with username: " + wardenInsertDTO.getUser().getUsername() + " already exists.");
         }
 
         // Check if VAT already exists
         if (userRepository.findByVat(wardenInsertDTO.getUser().getVat()).isPresent()) {
-            throw new AppObjectAlreadyExists("VAT", "VAT already exists: " + wardenInsertDTO.getUser().getVat());
+            throw new AppObjectAlreadyExists("WARDEN", "Warden with VAT: " + wardenInsertDTO.getUser().getVat() + " already exists");
+        }
+
+        if (userRepository.findByEmail(wardenInsertDTO.getUser().getEmail()).isPresent()) {
+            throw new AppObjectAlreadyExists("WARDEN", "Warden with email: " + wardenInsertDTO.getUser().getEmail() + " already exists");
         }
 
         // Map DTO to entity
@@ -104,76 +109,39 @@ public class WardenService {
      *
      * @param studentId the ID of the student
      */
-    @Transactional()
-    public StudentReadOnlyDTO removeStudentFromRoom(Long studentId) throws AppServerException {
-        try {
-            LOGGER.info("Warden removing student with ID {} from their room", studentId);
+    @Transactional
+    public StudentReadOnlyDTO removeStudentFromRoom(Long studentId) throws AppObjectInvalidArgumentException, AppObjectNotFoundException {
+        LOGGER.info("Warden removing student with ID {}", studentId);
 
-            Student student = studentRepository.findById(studentId)
-                    .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student with ID " + studentId + " not found."));
+        Student student = studentRepository.findById(studentId)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student with ID " + studentId + " not found."));
 
-            Room room = student.getRoom();
-
-            if (room == null) {
-                LOGGER.warn("Student with ID {} is not assigned to any room.", studentId);
-                throw new AppObjectInvalidArgumentException("STUDENT", "Student with ID " + studentId + " is not assigned to any room.");
-            }
-
-            LOGGER.info("Removing student {} from room {}", studentId, room.getId());
-            room.getStudents().remove(student);
-            student.setRoom(null);
-            studentRepository.save(student);
-            LOGGER.info("Student with ID {} successfully removed from room", studentId);
-            return mapper.mapToStudentReadOnlyDTO(student);
-
-        } catch (Exception e) {
-            LOGGER.error("Error while unassigning student from room", e);
-            throw new AppServerException("UNASSIGN_ERROR", "Could not unassign student from room");
+        if (student.getRoom() == null) {
+            LOGGER.warn("Student with ID {} is not assigned to any room.", studentId);
+            throw new AppObjectInvalidArgumentException("STUDENT", "Student with ID " + studentId + " is not assigned to any room.");
         }
+
+        Room room = student.getRoom();
+        LOGGER.info("Removing student {} from room {}", studentId, room.getId());
+
+        room.getStudents().remove(student);
+        student.setRoom(null);
+        studentRepository.save(student);
+
+        LOGGER.info("Student with ID {} successfully removed from room", studentId);
+        return mapper.mapToStudentReadOnlyDTO(student);
+    }
+
+
+    public void deleteStudent(Long studentId) throws AppObjectNotFoundException {
+        Student student = studentRepository.findById(studentId)
+                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + studentId));
+
+        studentRepository.delete(student); // Permanent removal ✅
     }
 
 
 
 
 
-
-    /**
-     * Fetches a list of all students assigned to a specific room.
-     *
-     * @param roomId the ID of the room
-     * @return List of StudentReadOnlyDTO with details of the students
-     */
-    @Transactional(readOnly = true)
-    public List<StudentReadOnlyDTO> getStudentsInRoom(Long roomId) throws AppObjectNotFoundException {
-        LOGGER.info("Fetching students in room with ID {}", roomId);
-
-        Room room = roomRepository.findById(roomId)
-                .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
-
-        List<StudentReadOnlyDTO> students = room.getStudents().stream()
-                .map(mapper::mapToStudentReadOnlyDTO)
-                .peek(dto -> dto.getRoom().setRoomId(roomId)) // Ensure roomId is set
-                .collect(Collectors.toList());
-
-        LOGGER.info("Found {} students in room with ID {}", students.size(), roomId);
-        return students;
-    }
-
-    /**
-     * Checks if a specific room has available capacity.
-     *
-     * @param roomId the ID of the room
-     * @return true if the room has capacity, false otherwise
-     */
-    @Transactional(readOnly = true)
-    public boolean isRoomAvailable(Long roomId) throws AppObjectNotFoundException {
-        LOGGER.info("Checking availability for room with ID {}", roomId);
-
-        Room room = roomRepository.findById(roomId)
-                .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
-
-        boolean available = room.getStudents().size() < room.getRoomCapacity();
-        LOGGER.info("Room with ID {} is {}available", roomId, available ? "" : "not ");
-        return available;
-    }
 }

@@ -11,11 +11,4 @@ public interface RoomRepository extends JpaRepository<Room, Long>, JpaSpecificat
 
     Optional<Room> findById(Long id);
 
-
-
-
-
-
-
-
 }

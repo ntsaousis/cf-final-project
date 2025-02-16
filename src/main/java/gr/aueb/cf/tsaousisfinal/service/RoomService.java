@@ -28,14 +28,11 @@ public class RoomService {
      * @return List of RoomReadOnlyDTO
      */
     @Transactional(readOnly = true, rollbackFor = Exception.class)
-    public List<RoomReadOnlyDTO> getAllRooms() {
+    public List<RoomReadOnlyDTO> getAllRooms() throws AppObjectNotFoundException {
         LOGGER.info("Fetching all rooms");
 
-//        String defaultSort = "id";
-//        Pageable pageable = PageRequest.of(page, size, Sort.by(defaultSort).ascending());
-//        return roomRepository.findAll(pageable).map(entityMapper::mapToReadOnlyRoomDTO);
-
         List<Room> rooms = roomRepository.findAll();
+        if (rooms.isEmpty()) {throw new AppObjectNotFoundException("ROOM", "No Rooms found");}
         LOGGER.info("Successfully fetched {} rooms", rooms.size());
 
         return rooms.stream()

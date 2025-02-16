@@ -13,6 +13,8 @@ import gr.aueb.cf.tsaousisfinal.service.StudentService;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,14 +26,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RoomController {
 
-
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(RoomController.class);
     private final RoomService roomService;
-    private final WardenService wardenService;
+    private final StudentService studentService;
 
     @GetMapping
     public ResponseEntity<List<RoomReadOnlyDTO>> getRooms(
-            ) {
+            ) throws AppObjectNotFoundException {
 
         List<RoomReadOnlyDTO> roomsList = roomService.getAllRooms();
         return new ResponseEntity<>(roomsList, HttpStatus.OK);
@@ -40,32 +41,9 @@ public class RoomController {
     @GetMapping("/{roomId}")
     public ResponseEntity<List<StudentReadOnlyDTO>> getStudentsByRoom(@PathVariable Long roomId) throws AppObjectNotFoundException  {
 
-            List<StudentReadOnlyDTO> studentsInRoom = wardenService.getStudentsInRoom(roomId);
+            List<StudentReadOnlyDTO> studentsInRoom = studentService.getStudentsInRoom(roomId);
             return ResponseEntity.ok(studentsInRoom);
 
     }
-
-    @PostMapping("/assign")
-    public ResponseEntity<?> assignStudentToRoom(@Valid @RequestBody RoomAssignmentDTO request) throws
-            AppObjectNotFoundException, AppObjectAlreadyExists {
-        System.out.println("Received assign request: " + request.getStudentId());
-
-
-        RoomReadOnlyDTO room = wardenService.assignStudent(request.getStudentId(), request.getRoomId());
-        return ResponseEntity.ok(room);
-
-    }
-
-    @PutMapping("/unassign/{id}")
-    public ResponseEntity<StudentReadOnlyDTO> unassignStudent(@PathVariable Long id) throws
-            AppObjectInvalidArgumentException, AppObjectNotFoundException , AppServerException {
-        StudentReadOnlyDTO removedStudent =  wardenService.removeStudentFromRoom(id);
-        return new ResponseEntity<>(removedStudent,HttpStatus.OK);
-    }
-
-//    @DeleteMapping"(/{studentId}")
-//    public ResponseEntity<StudentReadOnlyDTO> unassignStudentFromRoom(Long studentId) {
-//
-//        }
 
 }

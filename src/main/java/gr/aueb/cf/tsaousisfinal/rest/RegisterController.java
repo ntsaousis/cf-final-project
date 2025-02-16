@@ -10,6 +10,10 @@ import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.service.StudentService;
 import gr.aueb.cf.tsaousisfinal.service.WardenService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,9 +22,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
-
-
-
+import java.io.IOException;
 
 
 @RestController
@@ -31,22 +33,28 @@ public class RegisterController {
     private final StudentService studentService;
     private final WardenService wardenService;
 
+
+    @Operation(
+            summary = "Register a new student",
+            description = "Creates a new student and returns the created object. This endpoint is public and does not require authentication."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Student created successfully"),
+            @ApiResponse(responseCode = "409", description = "Conflict - Student already exists", content = @Content),
+            @ApiResponse(responseCode = "400", description = "Bad Request - Invalid input", content = @Content)
+    })
     // Endpoint για φοιτητές
     @PostMapping("/student")
-    public ResponseEntity<?> registerStudent(@Valid @RequestBody StudentInsertDTO studentInsertDTO, BindingResult bindingResult) {
+    public ResponseEntity<StudentReadOnlyDTO> registerStudent(@Valid @RequestBody StudentInsertDTO studentInsertDTO, BindingResult bindingResult) throws AppObjectAlreadyExists, IOException, ValidationException {
 
         if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>(bindingResult.getAllErrors(), HttpStatus.BAD_REQUEST);
+            throw  new ValidationException(bindingResult);
         }
 
-        try {
-            StudentReadOnlyDTO registeredStudent = studentService.createStudent(studentInsertDTO);
+        StudentReadOnlyDTO registeredStudent = studentService.createStudent(studentInsertDTO);
             return new ResponseEntity<>(registeredStudent, HttpStatus.CREATED);
-        } catch (AppObjectAlreadyExists e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
-        } catch (Exception e) {
-            return new ResponseEntity<>("An error occurred: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+
+
     }
 
     // Endpoint για επιμελητές

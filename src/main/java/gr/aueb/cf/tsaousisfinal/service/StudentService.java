@@ -9,6 +9,8 @@ import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentUpdateDTO;
 import gr.aueb.cf.tsaousisfinal.mapper.Mapper;
 import gr.aueb.cf.tsaousisfinal.model.Student;
+import gr.aueb.cf.tsaousisfinal.model.static_data.Room;
+import gr.aueb.cf.tsaousisfinal.repositories.RoomRepository;
 import gr.aueb.cf.tsaousisfinal.repositories.StudentRepository;
 import gr.aueb.cf.tsaousisfinal.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,38 +36,25 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
     private final UserRepository userRepository;
+    private final RoomRepository roomRepository;
     private final Mapper mapper;
     private final PasswordEncoder passwordEncoder;
 
-    @Transactional
-    public StudentReadOnlyDTO createStudent(StudentInsertDTO studentInsertDTO) throws AppObjectAlreadyExists, IOException {
+    @Transactional(rollbackFor = Exception.class)
+    public StudentReadOnlyDTO createStudent(StudentInsertDTO studentInsertDTO) throws AppObjectAlreadyExists {
         // Check if username already exists
-        userRepository.findByUsername(studentInsertDTO.getUser().getUsername())
-                .ifPresent(user -> {
-                    try {
-                        throw new AppObjectAlreadyExists("USERNAME", "Username already exists: " + user.getUsername());
-                    } catch (AppObjectAlreadyExists e) {
-                        throw new RuntimeException(e);
-                    }
-                });
+        if (userRepository.findByUsername(studentInsertDTO.getUser().getUsername()).isPresent()) {
+            throw new AppObjectAlreadyExists("STUDENT", "Student with username: " + studentInsertDTO.getUser().getUsername() + " already exists.");
+        }
 
         // Check if VAT already exists
-        userRepository.findByVat(studentInsertDTO.getUser().getVat())
-                .ifPresent(user -> {
+        if (userRepository.findByVat(studentInsertDTO.getUser().getVat()).isPresent()) {
+            throw new AppObjectAlreadyExists("STUDENT", "Student with VAT: " + studentInsertDTO.getUser().getVat() + " already exists");
+        }
 
-                    try {
-                        throw new AppObjectAlreadyExists("VAT", "VAT already exists: " + user.getVat());
-                    } catch (AppObjectAlreadyExists e) {
-                        throw new RuntimeException(e);
-                    }
-
-                });
-        // Check if Email Already Exists
-
-//        userRepository.findByEmail(studentInsertDTO.getUser().getEmail())
-//                .ifPresent();
-
-
+        if (userRepository.findByEmail(studentInsertDTO.getUser().getEmail()).isPresent()) {
+            throw new AppObjectAlreadyExists("STUDENT", "Student with email: " + studentInsertDTO.getUser().getEmail() + " already exists");
+        }
 
         // Map DTO to entity
         Student student = mapper.mapToStudentEntity(studentInsertDTO);
@@ -80,6 +69,7 @@ public class StudentService {
         return mapper.mapToStudentReadOnlyDTO(student);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public Page<StudentReadOnlyDTO> getPaginatedStudents(int page, int size) {
         String defaultSort = "id";
         Pageable pageable = PageRequest.of(page, size, Sort.by(defaultSort).ascending());
@@ -95,21 +85,21 @@ public class StudentService {
         return mapper.mapToStudentReadOnlyDTO(student);
     }
 
-
+    @Transactional(rollbackFor = Exception.class)
     public StudentReadOnlyDTO getStudentByUuid(String uuid) throws AppObjectNotFoundException {
-        Student student  = studentRepository.findByUuid(uuid)
+        Student student = studentRepository.findByUuid(uuid)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found found" + uuid));
         return mapper.mapToStudentReadOnlyDTO(student);
     }
 
     @Transactional(readOnly = true)
-    public List<StudentReadOnlyDTO> getAllStudents()  {
+    public List<StudentReadOnlyDTO> getAllStudents() {
         return studentRepository.findAll().stream()
                 .map(mapper::mapToStudentReadOnlyDTO)
                 .collect(Collectors.toList());
     }
 
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true, rollbackFor = Exception.class)
     public StudentReadOnlyDTO getStudentByUsername(String username) throws AppObjectNotFoundException {
         Student student = studentRepository.findByUserUsername(username)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with username: " + username));
@@ -117,7 +107,7 @@ public class StudentService {
         return mapper.mapToStudentReadOnlyDTO(student);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO)
             throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
 
@@ -125,8 +115,7 @@ public class StudentService {
         Student student = studentRepository.findByUserId(id)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
 
-        // Update email if provided
-        ;
+
         student.getUser().setEmail(studentUpdateDTO.getUser().getEmail());
 
 
@@ -135,26 +124,29 @@ public class StudentService {
         return mapper.mapToStudentReadOnlyDTO(updatedStudent);
     }
 
+    /**
+     * Fetches a list of all students assigned to a specific room.
+     *
+     * @param roomId the ID of the room
+     * @return List of StudentReadOnlyDTO with details of the students
+     */
+    @Transactional(readOnly = true)
+    public List<StudentReadOnlyDTO> getStudentsInRoom(Long roomId) throws AppObjectNotFoundException {
+        LOGGER.info("Fetching students in room with ID {}", roomId);
 
+        Room room = roomRepository.findById(roomId)
+                .orElseThrow(() -> new AppObjectNotFoundException("ROOM", "Room with ID " + roomId + " not found."));
 
-//    @Transactional
-//    public StudentReadOnlyDTO updateStudent(Long id, StudentInsertDTO studentInsertDTO)
-//            throws AppObjectNotFoundException, IOException {
-//        Student existingStudent = studentRepository.findById(id)
-//                .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
-//
-//        // Map new data onto existing student
-//        mapper.updateStudentEntityFromDTO(studentInsertDTO, existingStudent);
-//
-//        // Encrypt password if changed
-//        if (studentInsertDTO.getUser().getPassword() != null) {
-//            existingStudent.getUser().setPassword(passwordEncoder.encode(studentInsertDTO.getUser().getPassword()));
-//        }
-//
-//        // Save updated student
-//        Student updatedStudent = studentRepository.save(existingStudent);
-//
-//        return mapper.mapToStudentReadOnlyDTO(updatedStudent);
-//    }
+        List<StudentReadOnlyDTO> students = room.getStudents().stream()
+                .map(mapper::mapToStudentReadOnlyDTO)
+                .peek(dto -> dto.getRoom().setRoomId(roomId)) // Ensure roomId is set
+                .collect(Collectors.toList());
+
+        LOGGER.info("Found {} students in room with ID {}", students.size(), roomId);
+        return students;
+    }
 }
+
+
+
 
