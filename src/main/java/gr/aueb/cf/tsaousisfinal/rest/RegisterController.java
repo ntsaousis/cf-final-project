@@ -2,7 +2,6 @@ package gr.aueb.cf.tsaousisfinal.rest;
 
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
-import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.ValidationException;
 import gr.aueb.cf.tsaousisfinal.dto.StudentInsertDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
@@ -19,7 +18,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -56,6 +54,17 @@ public class RegisterController {
 
 
     }
+
+
+    @Operation(
+            summary = "Register a new warden",
+            description = "Creates a new warden and returns the created object. This endpoint is public and does not require authentication."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Student created successfully"),
+            @ApiResponse(responseCode = "409", description = "Conflict - Student already exists", content = @Content),
+            @ApiResponse(responseCode = "400", description = "Bad Request - Invalid input", content = @Content)
+    })
 
     // Endpoint για επιμελητές
     @PostMapping("/warden")

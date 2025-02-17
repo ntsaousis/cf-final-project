@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.*;
 public class WardenController {
 
     private final WardenService wardenService;
-    private final StudentService studentService;
+
 
 
 
@@ -37,7 +37,7 @@ public class WardenController {
      * Hard delete a student (permanently removes from database)
      */
     @Operation(
-            summary = "Hard delete a student",
+            summary = "Hard deletes a student",
             description = "Permanently removes a student from the database. Requires Warden authentication."
     )
     @ApiResponses(value = {
@@ -56,6 +56,24 @@ public class WardenController {
     }
 
 
+
+    @Operation(
+            summary = "Assign a student to a room",
+            description = "Assigns a student to a specified room. Ensures that the student is not already assigned to another room.",
+            security = @SecurityRequirement(name = "bearerAuth"),
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Student successfully assigned to the room",
+                            content = @Content(mediaType = "application/json",
+                                    schema = @Schema(implementation = RoomReadOnlyDTO.class))),
+                    @ApiResponse(responseCode = "400", description = "Invalid request (e.g., student already assigned)",
+                            content = @Content(mediaType = "application/json")),
+                    @ApiResponse(responseCode = "404", description = "Student or room not found",
+                            content = @Content(mediaType = "application/json")),
+                    @ApiResponse(responseCode = "500", description = "Internal server error",
+                            content = @Content(mediaType = "application/json"))
+            }
+    )
+    @SecurityRequirement(name = "bearerAuth")
     @PostMapping("/assign")
     public ResponseEntity<?> assignStudentToRoom(@Valid @RequestBody RoomAssignmentDTO request) throws
             AppObjectNotFoundException, AppObjectAlreadyExists {
@@ -67,6 +85,24 @@ public class WardenController {
 
     }
 
+
+    @Operation(
+            summary = "Unassign a student from a room",
+            description = "Removes the student from their assigned room and updates their status accordingly.",
+            security = @SecurityRequirement(name = "bearerAuth"),
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Student successfully unassigned",
+                            content = @Content(mediaType = "application/json",
+                                    schema = @Schema(implementation = StudentReadOnlyDTO.class))),
+                    @ApiResponse(responseCode = "400", description = "Invalid request (e.g., student not assigned to any room)",
+                            content = @Content(mediaType = "application/json")),
+                    @ApiResponse(responseCode = "404", description = "Student not found",
+                            content = @Content(mediaType = "application/json")),
+                    @ApiResponse(responseCode = "500", description = "Internal server error",
+                            content = @Content(mediaType = "application/json"))
+            }
+    )
+    @SecurityRequirement(name = "bearerAuth")
     @PutMapping("/unassign/{id}")
     public ResponseEntity<StudentReadOnlyDTO> unassignStudent(@PathVariable Long id) throws
             AppObjectInvalidArgumentException, AppObjectNotFoundException , AppServerException {
