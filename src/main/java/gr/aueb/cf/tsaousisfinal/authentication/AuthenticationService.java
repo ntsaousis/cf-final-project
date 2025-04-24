@@ -1,6 +1,7 @@
 package gr.aueb.cf.tsaousisfinal.authentication;
 
 
+import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotAuthorizedException;
 import gr.aueb.cf.tsaousisfinal.dto.AuthenticationRequestDTO;
 import gr.aueb.cf.tsaousisfinal.dto.AuthenticationResponseDTO;
 import gr.aueb.cf.tsaousisfinal.model.User;
@@ -21,19 +22,16 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final UserRepository userRepository;
 
-    public AuthenticationResponseDTO authenticate(AuthenticationRequestDTO dto) {
-        // throws AppObjectNotAuthorizedException {
-        // Authenticate and Create an authentication token from username and password
+    public AuthenticationResponseDTO authenticate(AuthenticationRequestDTO dto) throws AppObjectNotAuthorizedException {
+
+
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword())
         );
 
-        User user = (User) authentication.getPrincipal();
+        User user = userRepository.findByUsername(authentication.getName())
+                .orElseThrow(() -> new AppObjectNotAuthorizedException("User", "User not authorized"));
 
-//        User user = userRepository.findByUsername(authentication.getName())
-//                .orElseThrow(() -> new AppObjectNotAuthorizedException("User", "User not authorized"));
-
-        // If authentication was successful, generate JWT token
         String token = jwtService.generateToken(authentication.getName(), user.getRole().name(), user.getId());
         return new AuthenticationResponseDTO(user.getFirstName(), user.getLastName(), token);
     }

@@ -109,13 +109,15 @@ public class StudentService {
 
     @Transactional(rollbackFor = Exception.class)
     public StudentReadOnlyDTO updateStudent(Long id, StudentUpdateDTO studentUpdateDTO)
-            throws AppObjectNotFoundException, AppObjectInvalidArgumentException {
+            throws AppObjectNotFoundException, AppObjectInvalidArgumentException, AppObjectAlreadyExists {
 
 
         Student student = studentRepository.findByUserId(id)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + id));
 
-
+        if (userRepository.existsByEmail(studentUpdateDTO.getUser().getEmail())) {
+            throw new AppObjectAlreadyExists("Student", "Email already exists");
+        }
         student.getUser().setEmail(studentUpdateDTO.getUser().getEmail());
 
 
@@ -130,7 +132,7 @@ public class StudentService {
      * @param roomId the ID of the room
      * @return List of StudentReadOnlyDTO with details of the students
      */
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true, rollbackFor = Exception.class)
     public List<StudentReadOnlyDTO> getStudentsInRoom(Long roomId) throws AppObjectNotFoundException {
         LOGGER.info("Fetching students in room with ID {}", roomId);
 

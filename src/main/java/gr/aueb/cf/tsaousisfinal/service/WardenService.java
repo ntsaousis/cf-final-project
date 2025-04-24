@@ -3,7 +3,6 @@ package gr.aueb.cf.tsaousisfinal.service;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectAlreadyExists;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectInvalidArgumentException;
 import gr.aueb.cf.tsaousisfinal.core.exceptions.AppObjectNotFoundException;
-import gr.aueb.cf.tsaousisfinal.core.exceptions.AppServerException;
 import gr.aueb.cf.tsaousisfinal.dto.RoomReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.StudentReadOnlyDTO;
 import gr.aueb.cf.tsaousisfinal.dto.WardenInsertDTO;
@@ -23,8 +22,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Service
 @RequiredArgsConstructor
@@ -133,15 +131,16 @@ public class WardenService {
     }
 
 
+    /**
+     * Deletes a student permanently from the database.
+     * @param studentId The ID of the student to be deleted.
+     */
+    @Transactional(rollbackFor = Exception.class)
     public void deleteStudent(Long studentId) throws AppObjectNotFoundException {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new AppObjectNotFoundException("STUDENT", "Student not found with ID: " + studentId));
 
-        studentRepository.delete(student); // Permanent removal ✅
+        studentRepository.delete(student);
     }
-
-
-
-
 
 }

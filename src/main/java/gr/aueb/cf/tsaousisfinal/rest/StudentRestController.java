@@ -85,7 +85,7 @@ public class StudentRestController {
     public ResponseEntity<StudentReadOnlyDTO> updateStudent(@PathVariable Long id,
                                                             @Valid @RequestBody StudentUpdateDTO studentUpdateDTO,
                                                             BindingResult bindingResult)
-            throws ValidationException, AppObjectNotFoundException, AppObjectInvalidArgumentException {
+            throws ValidationException, AppObjectNotFoundException, AppObjectInvalidArgumentException,AppObjectAlreadyExists {
 
         if (bindingResult.hasErrors()) {
             throw new ValidationException(bindingResult);
